@@ -1,0 +1,122 @@
+html {
+  scroll-behavior: smooth;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+body {
+  margin: 0px;
+}
+
+.layoutside {
+  display: flex;
+  height: 100%;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #e7e9eb;
+}
+
+.headerNavbar {
+  padding: 30px 20px 10px 20px;
+}
+
+a {
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  background-color: rgb(207, 207, 207);
+}
+
+.main-doc {
+  padding: 10px 20px 20px 40px;
+}
+
+.main-section {
+  padding: 40px 0px 40px 0px;
+}
+
+header {
+  font-size: 1.5em;
+  text-decoration: underline;
+}
+
+.codebox {
+  border-left: 4px solid #04aa6d;
+  padding-left: 20px;
+  background-color: #e7e9eb;
+}
+
+h2 {
+  padding-top: 25px;
+}
+
+h3 {
+  padding-top: 25px;
+}
+
+.imgboxModel {
+  height: 600px;
+  object-fit: contain;
+}
+
+.example {
+  text-align: center;
+  border: solid;
+}
+
+.center {
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  object-fit: scale-down;
+}
+
+@media only screen and (max-width: 800px) {
+  .navbar {
+    width: 20vw;
+  }
+
+  #main-doc {
+    margin-left: -10px;
+  }
+
+  code {
+    margin-left: -20px;
+    width: 100%;
+    padding: 15px;
+    padding-left: 10px;
+    padding-right: 45px;
+    min-width: 233px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .navbar {
+    display: none;
+  }
+
+  #main-doc {
+    margin-left: -20px;
+  }
+
+  code {
+    margin-left: -20px;
+    width: 100%;
+    padding: 15px;
+    padding-left: 10px;
+    padding-right: 45px;
+    min-width: 233px;
+  }
+}
