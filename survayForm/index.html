@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="stylesheet.css">
+  <title>Survey Form</title>
+</head>
+
+<body>
+  <main>
+    <div>
+
+      <h1 id="title" class="title">Title of the survey form</h1>
+
+      <p id="description">Short explanation of the survey short.</p>
+
+      <form id="survey-form">
+
+        <div class="textformat">
+          <label id="name-label">
+            <div class="textpick">Query Elementary (e.g. name):</div>
+            <input id="name" class="textformular" type="text" required placeholder="Enter your name.">
+          </label><br>
+        </div>
+
+        <div class="textformat">
+          <label id="email-label">
+            <div class="textpick">Query Elementary (e.g. e-mail):</div>
+            <input id="email" class="textformular" type="email" required placeholder="Enter your E-Mail.">
+          </label><br>
+        </div>
+
+        <div class="textformat">
+          <label id="number-label">
+            <div class="textpick">Query Elementary (e.g. age):</div>
+            <input id="number" class="textformular" type="number" min="0" max="100" required
+              placeholder="Enter your age.">
+          </label><br>
+        </div>
+
+        <div class="textformat">
+          <label id="radio">
+            <div class="textpick">Fiel form to pick:</div>
+            <input class="radioformular" value="option1" id="pickdistribution" type="radio" name="pickoption">Option
+            1<br>
+            <input class="radioformular" value="option2" id="pickdistribution" type="radio" name="pickoption">Option
+            2<br>
+            <input class="radioformular" value="option3" id="pickdistribution" type="radio" name="pickoption">Option
+            3<br>
+            <input class="radioformular" value="option4" id="pickdistribution" type="radio" name="pickoption">Option
+            4<br>
+            <input class="radioformular" value="option5" id="pickdistribution" type="radio" name="pickoption">Option
+            5<br>
+          </label><br>
+        </div>
+
+        <div class="textformat">
+          <label id="checkbox">
+            <div class="textpick">Question or action for select several fields</div>
+            <select id="dropdown" name="role" class="textformular" required="">
+              <option disabled="" selected="" value="">Select current role</option>
+              <option value="fieldoption1">Field option 1</option>
+              <option value="fieldoption2">Field option 2</option>
+              <option value="fieldoption3">Field option 3</option>
+              <option value="fieldoption4">Field option 4</option>
+              <option value="fieldoption5">Field option 5</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="textformat">
+          <label id="checkbox">
+            <div class="textpick">Question or action for select al lot of options:</div>
+            <input value="selection1" id="checkbox" type="checkbox" name="pick">selection1<br>
+            <input value="selection2" id="checkbox" type="checkbox" name="pick">selection2<br>
+            <input value="selection3" id="checkbox" type="checkbox" name="pick">selection3<br>
+            <input value="selection4" id="checkbox" type="checkbox" name="pick">selection4<br>
+          </label><br>
+        </div>
+
+        <div class="textformat">
+          <label id="textarea" class="textpick">
+            <textarea id="textarea">Your message.</textarea><br>
+          </label><br>
+        </div>
+
+        <div class="textformat">
+          <label id="submitbutton" action="#">
+            <button id="submit" type="submit">sending</button>
+          </label><br>
+        </div>
+
+      </form>
+    </div>
+
+  </main>
+
+
+</body>
+
+</html>
