@@ -1,0 +1,116 @@
+body {
+  font-family: Verdana;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 0;
+}
+
+main {
+  background-color: #eeeeee;
+  margin: 10px;
+  width: 100vw;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3em;
+  margin-bottom: 0;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 0;
+  width: 40vw;
+}
+
+h5 {
+  text-align: center;
+
+  margin-bottom: 0;
+  width: 40vw;
+}
+
+p {
+  text-align: center;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+.titleunder {
+  margin-top: 0.5em;
+  margin-bottom: 2em;
+}
+
+.img-div {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image {
+  margin: 1em;
+  max-width: 50vh;
+  padding: 1em;
+  object-fit: contain;
+  background-color: #eeeeee;
+}
+
+.img-caption {
+  padding-bottom: 1em;
+  max-width: 40vw;
+}
+
+.tribute-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.historytable {
+  max-width: 40vw;
+}
+
+li {
+  padding: 0.7em;
+  text-align: start;
+}
+
+.quote {
+  padding: 2em;
+  font-style: italic;
+}
+
+footer {
+  padding: 1em;
+}
+
+.footerdiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.infowiki {
+  width: 20vw;
+  display: flex;
+  justify-content: center;
+  padding: 2.5em;
+  font-size: 0.6em;
+}
+
+.wikilink {
+  text-align: center;
+  padding: 0.5em;
+}
+
+.wikilog {
+  max-width: 100px;
+  object-fit: contain;
+}
