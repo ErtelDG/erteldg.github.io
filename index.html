@@ -1,24 +1,90 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="stylesheet.css" />
-  <title>Product Landing Page</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="stylesheet.css">
+  <title>Portfolio Webpage</title>
 </head>
 
 <body>
+  <div id="welcome-section" class="welcome-section">
+    <header>
+      <nav id="navbar" class="navbar">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#profile-link">Contact</a>
+      </nav>
+    </header>
+    <main>
+      <div>
+        <div id="about" class="greetingSide">
+          <h1>Hey I am Dennis</h1>
+          <p>On this Side you can see my Projects</p>
+          <p>My first projects was the Certification Projects of FreeCodeCamp.</p>
+        </div>
+      </div>
 
-  <a href="/tributPage/index.html">Tribut Page</a>
-  <a href="/surveyForm/index.html">Survey Form</a>
-  <a href="/productLandingPage/index.html">Product Landing Page</a>
-  <a href="/technicalDocumentationPage/index.html">Technical Documentation Page</a>
- 
+      <div id="projects" class="project-side">
+        <h2 class="projects-section-header">These are some of my projects</h2>
+        <div class="projects">
+          <div class="projectblock">
+            <h3>HTML/CSS</h3>
+            <div id="freeCodeCampHtmlCss" class="containProjects">
+              <div>
+                <h4>Certification Projects of FreeCodeCamp</h4>
+              </div>
+              <div>
+                <div class="projectGroup">
+                  <div>
+                    <!-- Project1-->
+                    <div class="project">
+                      <h5>History of Linux</h5>
+                      <div>
+                        <a href="historyOfLinux/index.html" target="_blank"><img class="link-img"
+                            src="img/screenshotHistoryOfLinux.png"></a>
+                      </div>
+                    </div>
+                    <!-- Project2-->
+                    <div class="project">
+                      <h5>Product Landing Page</h5>
+                      <a href="productLandingPage/index.html" target="_blank"><img class="link-img"
+                          src="img/screenshotProductLandingPage.png">
+                      </a>
+                    </div>
+                  </div>
+                  <div>
+                    <!-- Project3-->
+                    <div class="project">
+                      <h5>Survay Form</h5>
+                      <a href="survayForm/index.html" target="_blank"><img class="link-img"
+                          src="img/screenshotSurvayForm.png"></a>
+                    </div>
+                    <!-- Project4-->
+                    <div class="project">
+                      <h5>Technical Documentation Page</h5>
+                      <a href="technicalDocumentationPage/index.html" target="_blank"><img class="link-img"
+                          src="img/screenshotTechnicalDocumentationPage.png"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </main>
+    <footer>
+      <div class="contact">
+        <img class="icon-footer" src="./img/GitHub-Mark-Light-64px.png">
+        <div class="link-footer">
+          <a id="profile-link" href="https://github.com/Titan3070" target="_blank">GitHub</a>
+        </div>
+      </div>
+    </footer>
+
 
 </body>
-
 
 </html>
