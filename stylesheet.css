@@ -13,27 +13,31 @@ body {
 }
 
 h1 {
-  font-size: 4em;
+  font-size: clamp(2rem, 1.5714rem + 2.1429vw, 5rem);
 }
 
 h2 {
-  font-size: 3em;
+  font-size: clamp(1.4rem, 1.1rem + 1.5vw, 3.5rem);
 }
 
 h3 {
-  font-size: 2em;
+  font-size: clamp(1rem, 0.7857rem + 1.0714vw, 2.5rem);
 }
 
+/*h4-h5 und p Bearbeiten min. 0,6rem!!!*/
+
 h4 {
-  font-size: 1.5em;
+  font-size: clamp(0.8rem, 0.6286rem + 0.8571vw, 2rem);
 }
 
 h5 {
-  font-size: 1em;
+  font-size: clamp(0.72rem, 0.5657rem + 0.7714vw, 1.8rem);
+  margin-bottom: clamp(0.6rem, 0.4714rem + 0.6429vw, 1.5rem);
+  margin-top: clamp(0.6rem, 0.4714rem + 0.6429vw, 1.5rem);
 }
 
 p {
-  font-size: 2em;
+  font-size: clamp(0.8rem, 0.6286rem + 0.8571vw, 2rem);
 }
 
 .welcome-section {
@@ -46,7 +50,7 @@ p {
 }
 
 .navbar {
-  font-size: 1.5em;
+  font-size: clamp(0.6rem, 0.4714rem + 0.6429vw, 1.5rem);
   position: fixed;
   top: 0px;
   right: 0px;
@@ -56,8 +60,8 @@ p {
 
 a {
   color: white;
-  padding-left: 0.3em;
-  padding-right: 0.3em;
+  padding-left: clamp(0.4rem, 0.3143rem + 0.4286vw, 1rem);
+  padding-right: clamp(0.4rem, 0.3143rem + 0.4286vw, 1rem);
 }
 
 a:hover {
@@ -80,53 +84,74 @@ a:hover {
 }
 
 .projects-section-header {
-  padding-top: 2em;
-  padding-bottom: 1em;
+  padding-top: clamp(3.2rem, 2.5143rem + 3.4286vw, 8rem);
+  margin-bottom: 0;
 }
 
 .projectblock {
-  width: 60vw;
-  height: 60vh;
+  width: clamp(32rem, 25.1429rem + 34.2857vw, 80rem);
 }
 
 .link-img {
-  width: 400px;
-  height: 226px;
+  width: clamp(10rem, 7.8571rem + 10.7143vw, 25rem);
+  height: clamp(5.6rem, 4.4rem + 6vw, 14rem);
   object-fit: cover;
 }
 
 .projects {
-  padding: 10px;
+  padding: clamp(0.4rem, 0.3143rem + 0.4286vw, 1rem);
   display: flex;
   justify-content: center;
 }
 
 .projectGroup {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .project {
-  padding: 40px 10px 40px 10px;
+  border-style: ridge;
+  margin-top: clamp(0.4rem, 0.3143rem + 0.4286vw, 1rem);
+  margin-bottom: clamp(1.2rem, 0.9429rem + 1.2857vw, 3rem);
+}
+
+.pictureProject {
+  margin-bottom: clamp(0.6rem, 0.4714rem + 0.6429vw, 1.5rem);
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
 }
 
 .contact {
-  height: 50px;
+  margin-top: clamp(1.6rem, 1.2571rem + 1.7143vw, 4rem);
+  height: clamp(1.6rem, 1.2571rem + 1.7143vw, 4rem);
   display: flex;
+  align-items: center;
 }
 
 .icon-footer {
-  height: 50px;
-  width: 50px;
+  height: clamp(1.2rem, 0.9429rem + 1.2857vw, 3rem);
+  width: clamp(1.2rem, 0.9429rem + 1.2857vw, 3rem);
   object-fit: contain;
-  padding-left: 10px;
-  padding-right: 10px;
 }
 
 .link-footer {
-  padding-left: 10px;
-  padding-right: 10px;
   display: flex;
   align-items: center;
-  font-size: 1.5em;
+  font-size: clamp(0.6rem, 0.4714rem + 0.6429vw, 1.5rem);
+}
+
+@media only screen and (max-width: 500px) {
+  .projectGroup {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    padding-left: 20vw;
+    padding-right: 20vw;
+  }
 }
