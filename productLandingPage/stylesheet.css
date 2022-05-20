@@ -9,11 +9,15 @@ body {
 }
 
 h2 {
-  font-size: 3em;
+  font-size: clamp(1.2rem, 0.9429rem + 1.2857vw, 3rem);
 }
 
 h3 {
-  font-size: 2.5em;
+  font-size: clamp(1rem, 0.7857rem + 1.0714vw, 2.5rem);
+}
+
+p {
+  font-size: clamp(0.6rem, 0.5018rem + 0.4364vw, 1.2rem);
 }
 
 .sidestructure {
@@ -23,13 +27,13 @@ h3 {
 
 .header {
   width: 100%;
-  height: 150px;
+  height: clamp(3.8rem, 2.8673rem + 4.1455vw, 9.5rem);
   object-fit: cover;
 }
 
 .textheader {
   color: #7b95d7;
-  height: 100px;
+  height: clamp(2.5rem, 1.8864rem + 2.7273vw, 6.25rem);
   position: absolute;
   top: 0vh;
   right: 0vw;
@@ -37,15 +41,15 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-left: 30px;
-  padding-right: 30px;
-  font-size: 1.2em;
+  padding-left: clamp(0.8rem, 0.6036rem + 0.8727vw, 2rem);
+  padding-right: clamp(0.8rem, 0.6036rem + 0.8727vw, 2rem);
+  font-size: clamp(0.6rem, 0.5018rem + 0.4364vw, 1.2rem);
 }
 
 .nav-bar a {
   text-decoration: none;
   color: #7b95d7;
-  margin-left: 10px;
+  margin-left: clamp(0.4rem, 0.3143rem + 0.4286vw, 1rem);
 }
 
 .nav-bar a:hover {
@@ -58,6 +62,10 @@ h3 {
   background-color: hsl(249, 23%, 89%);
 }
 
+.product {
+  width: 95%;
+}
+
 .sidebar {
   background-color: #dcbff6;
   min-width: max-content;
@@ -66,26 +74,26 @@ h3 {
 .pictureproduct {
   object-fit: contain;
   background-color: #c1cd5d;
-  width: 40vw;
+  width: clamp(8rem, -1.1636rem + 40.7273vw, 64rem);
 }
 
 .productbox {
-  margin-top: 100px;
-  padding-left: 50px;
-  padding-right: 50px;
-  padding-bottom: 100px;
+  margin-top: clamp(2.5rem, 1.8864rem + 2.7273vw, 6.25rem);
+  padding-left: clamp(1.2rem, 0.9055rem + 1.3091vw, 3rem);
+  padding-right: clamp(1.2rem, 0.9055rem + 1.3091vw, 3rem);
+  padding-bottom: clamp(2.5rem, 1.8864rem + 2.7273vw, 6.25rem);
 
   border: #7b95d7;
   border-style: double;
 }
 
 .formular {
-  font-size: 1.5em;
+  font-size: clamp(0.6rem, 0.4714rem + 0.6429vw, 1.5rem);
 }
 
 .message {
-  width: 20vw;
-  height: 50px;
+  width: clamp(8rem, 4.0727rem + 17.4545vw, 32rem);
+  height: clamp(1.2rem, 0.9055rem + 1.3091vw, 3rem);
   text-align: center;
 }
 
@@ -93,7 +101,8 @@ h3 {
   .hide-mobile {
     display: none;
   }
-
+}
+/*
   .productpage {
     width: 100vw;
   }
@@ -113,3 +122,4 @@ h3 {
     width: 50vw;
   }
 }
+*/
