@@ -9,42 +9,41 @@ body {
 
 main {
   background-color: #eeeeee;
-  margin: 10px;
+  margin: 0;
   width: 100vw;
 }
 
 h1 {
   text-align: center;
-  font-size: 3em;
+  font-size: clamp(1.2rem, 0.9429rem + 1.2857vw, 3rem);
   margin-bottom: 0;
 }
 
 h2 {
   text-align: center;
-  font-size: 2rem;
+  font-size: clamp(0.8rem, 0.6286rem + 0.8571vw, 2rem);
   margin-bottom: 0;
-  width: 40vw;
 }
 
 h5 {
   text-align: center;
-
   margin-bottom: 0;
-  width: 40vw;
+  width: clamp(10rem, 5.0909rem + 21.8182vw, 40rem);
+  font-size: clamp(0.4rem, 0.3143rem + 0.4286vw, 1rem);
 }
 
 p {
   text-align: center;
   display: block;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
+  margin-block-start: clamp(0.4rem, 0.3143rem + 0.4286vw, 1rem);
+  margin-block-end: clamp(0.4rem, 0.3143rem + 0.4286vw, 1rem);
   margin-inline-start: 0px;
   margin-inline-end: 0px;
 }
 
 .titleunder {
-  margin-top: 0.5em;
-  margin-bottom: 2em;
+  margin-top: 0.5rem;
+  margin-bottom: clamp(0.8rem, 0.6286rem + 0.8571vw, 2rem);
 }
 
 .img-div {
@@ -55,16 +54,16 @@ p {
 }
 
 .image {
-  margin: 1em;
-  max-width: 50vh;
-  padding: 1em;
+  margin: clamp(0.4rem, 0.3143rem + 0.4286vw, 1rem);
+  max-width: clamp(10rem, 5.0909rem + 21.8182vw, 40rem);
+  padding: clamp(0.4rem, 0.3143rem + 0.4286vw, 1rem);
   object-fit: contain;
   background-color: #eeeeee;
 }
 
 .img-caption {
-  padding-bottom: 1em;
-  max-width: 40vw;
+  padding-bottom: clamp(0.4rem, 0.3143rem + 0.4286vw, 1rem);
+  max-width: clamp(25.6rem, 19.3164rem + 27.9273vw, 64rem);
 }
 
 .tribute-info {
@@ -74,21 +73,21 @@ p {
 }
 
 .historytable {
-  max-width: 40vw;
+  max-width: clamp(25.6rem, 19.3164rem + 27.9273vw, 64rem);
 }
 
 li {
-  padding: 0.7em;
+  padding: clamp(0.6rem, 0.5836rem + 0.0727vw, 0.7rem);
   text-align: start;
 }
 
 .quote {
-  padding: 2em;
+  padding: clamp(0.8rem, 0.6286rem + 0.8571vw, 2rem);
   font-style: italic;
 }
 
 footer {
-  padding: 1em;
+  padding: clamp(0.4rem, 0.3143rem + 0.4286vw, 1rem);
 }
 
 .footerdiv {
@@ -98,19 +97,26 @@ footer {
 }
 
 .infowiki {
-  width: 20vw;
+  width: clamp(3.75rem, -0.8727rem + 20.5455vw, 32rem);
   display: flex;
   justify-content: center;
-  padding: 2.5em;
-  font-size: 0.6em;
+  padding: clamp(1rem, 0.7857rem + 1.0714vw, 2.5rem);
+  font-size: 0.6rem;
 }
 
 .wikilink {
   text-align: center;
-  padding: 0.5em;
+  padding: 0.5rem;
 }
 
 .wikilog {
-  max-width: 100px;
+  max-width: clamp(0.6rem, -0.3245rem + 4.1091vw, 6.25rem);
   object-fit: contain;
+}
+
+@media only screen and (max-width: 1200px) {
+  .infowiki {
+    display: flex;
+    flex-direction: column;
+  }
 }
