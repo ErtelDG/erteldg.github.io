@@ -106,17 +106,4 @@ img {
   .navbar {
     display: none;
   }
-
-  #main-doc {
-    margin-left: -20px;
-  }
-
-  code {
-    margin-left: -20px;
-    width: 100%;
-    padding: 15px;
-    padding-left: 10px;
-    padding-right: 45px;
-    min-width: 233px;
-  }
 }
