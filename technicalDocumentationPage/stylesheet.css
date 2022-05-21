@@ -6,6 +6,7 @@ html {
 
 body {
   margin: 0px;
+  display: flex;
 }
 
 .layoutside {
@@ -14,6 +15,7 @@ body {
 }
 
 .navbar {
+  width: 40%;
   display: flex;
   flex-direction: column;
   padding: 20px;
@@ -81,25 +83,6 @@ h3 {
 
 img {
   object-fit: scale-down;
-}
-
-@media only screen and (max-width: 800px) {
-  .navbar {
-    width: 20vw;
-  }
-
-  #main-doc {
-    margin-left: -10px;
-  }
-
-  code {
-    margin-left: -20px;
-    width: 100%;
-    padding: 15px;
-    padding-left: 10px;
-    padding-right: 45px;
-    min-width: 233px;
-  }
 }
 
 @media only screen and (max-width: 650px) {

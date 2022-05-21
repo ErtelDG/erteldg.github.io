@@ -10,81 +10,81 @@
 </head>
 
 <body>
-  <div class="layoutside">
-    <nav id="navbar" class="navbar">
-      <header id="header" class="headerNavbar">CSS Documentation</header>
-      <a class="nav-link" href="#What_is_CSS?">What is CSS?</a>
-      <a class="nav-link" href="#CSS_syntax">CSS syntax</a>
-      <a class="nav-link" href="#The_box_model">The box model</a>
-      <a class="nav-link" href="#CSS_Position_Property">CSS Position Property</a>
-      <a class="nav-link" href="#CSS_Horizontal_and_Vertical_Align">CSS Horizontal and Vertical Align</a>
-      <a class="nav-link" href="#CSS_Background_Color_and_Image">CSS Background Color and Image</a>
-      <a class="nav-link" href="#CSS_Flexbox">CSS Flexbox</a>
-      <a class="nav-link" href="#CSS_Flex_Container">CSS Flex Container</a>
-      <a class="nav-link" href="#CSS_Properties_Flex_Items">CSS Properties Flex Items</a>
-      <a class="nav-link" href="#Reference">Reference</a>
-    </nav>
-    <main id="main-doc" class="main-doc">
-      <section class="main-section" id="What_is_CSS?">
-        <header class="headlineDocumentation">
-          What is CSS?
-        </header>
-        <p>CSS is the language we use to style a Web page.</p>
-        <code></code>
-        <li>CSS saves a lot of work. It can control the layout of multiple web pages all at once</li>
-        <li>CSS describes how HTML elements are to be displayed on screen, paper, or in other media</li>
-        <li>CSS stands for Cascading Style Sheets</li>
-        <li>External stylesheets are stored in CSS files</li>
-      </section>
-      <hr>
-      <section class="main-section" id="CSS_syntax">
-        <header>
-          CSS syntax
-        </header>
-        <p>A CSS rule consists of a selector and a declaration block.</p>
-        <img src="img/img_selector.gif">
-        <p>The selector points to the HTML element you want to style.
-          The declaration block contains one or more declarations separated by semicolons.
-          Each declaration includes a CSS property name and a value, separated by a colon.
-          Multiple CSS declarations are separated with semicolons, and declaration blocks are surrounded by curly
-          braces.</p>
-        <h3>Example</h3>
-        <p>In this example all elements will be center-aligned, with a red text color:</p>
-        <div class="codebox">
-          <code>
+  <!-- <div class="layoutside"> -->
+  <nav id="navbar" class="navbar">
+    <header id="header" class="headerNavbar">CSS Documentation</header>
+    <a class="nav-link" href="#What_is_CSS?">What is CSS?</a>
+    <a class="nav-link" href="#CSS_syntax">CSS syntax</a>
+    <a class="nav-link" href="#The_box_model">The box model</a>
+    <a class="nav-link" href="#CSS_Position_Property">CSS Position Property</a>
+    <a class="nav-link" href="#CSS_Horizontal_and_Vertical_Align">CSS Horizontal and Vertical Align</a>
+    <a class="nav-link" href="#CSS_Background_Color_and_Image">CSS Background Color and Image</a>
+    <a class="nav-link" href="#CSS_Flexbox">CSS Flexbox</a>
+    <a class="nav-link" href="#CSS_Flex_Container">CSS Flex Container</a>
+    <a class="nav-link" href="#CSS_Properties_Flex_Items">CSS Properties Flex Items</a>
+    <a class="nav-link" href="#Reference">Reference</a>
+  </nav>
+  <main id="main-doc" class="main-doc">
+    <section class="main-section" id="What_is_CSS?">
+      <header class="headlineDocumentation">
+        What is CSS?
+      </header>
+      <p>CSS is the language we use to style a Web page.</p>
+      <code></code>
+      <li>CSS saves a lot of work. It can control the layout of multiple web pages all at once</li>
+      <li>CSS describes how HTML elements are to be displayed on screen, paper, or in other media</li>
+      <li>CSS stands for Cascading Style Sheets</li>
+      <li>External stylesheets are stored in CSS files</li>
+    </section>
+    <hr>
+    <section class="main-section" id="CSS_syntax">
+      <header>
+        CSS syntax
+      </header>
+      <p>A CSS rule consists of a selector and a declaration block.</p>
+      <img src="img/img_selector.gif">
+      <p>The selector points to the HTML element you want to style.
+        The declaration block contains one or more declarations separated by semicolons.
+        Each declaration includes a CSS property name and a value, separated by a colon.
+        Multiple CSS declarations are separated with semicolons, and declaration blocks are surrounded by curly
+        braces.</p>
+      <h3>Example</h3>
+      <p>In this example all elements will be center-aligned, with a red text color:</p>
+      <div class="codebox">
+        <code>
           p {<br>
           color: red;<br>
           text-align: center;<br>
           }
         </code>
-        </div>
-        <h3>Example Explained</h3>
-        <li>p is a selector in CSS (it points to the HTML element you want to style:
-          &ltp&gt).
-        </li>
-        <li>color is a property, and red is the property value</li>
-        <li>text-align is a property, and center is the property value</li>
-      </section>
-      <hr>
-      <section class="main-section" id="The_box_model">
-        <header>
-          The box model
-        </header>
-        <p>All HTML elements can be considered as boxes.</p>
-        <p>In CSS, the term "box model" is used when talking about design and layout.
-          The CSS box model is essentially a box that wraps around every HTML element. It consists of: margins, borders,
-          padding,
-          and the actual content. The image below illustrates the box model:</p>
-        <img src="img/=CSS_Boxmodell_changed.png">
-        <p>Explanation of the different parts:</p>
-        <li><b>Content</b> - The content of the box, where text and images appear</li>
-        <li><b>Padding</b> - Clears an area around the content. The padding is transparent</li>
-        <li><b>Border</b> - A border that goes around the padding and content</li>
-        <li><b>Margin</b> - Clears an area outside the border. The margin is transparent</li>
-        <p>The box model allows us to add a border around elements, and to define space between elements.</p>
-        <h3>Example</h3>
-        <div class="codebox">
-          <code>
+      </div>
+      <h3>Example Explained</h3>
+      <li>p is a selector in CSS (it points to the HTML element you want to style:
+        &ltp&gt).
+      </li>
+      <li>color is a property, and red is the property value</li>
+      <li>text-align is a property, and center is the property value</li>
+    </section>
+    <hr>
+    <section class="main-section" id="The_box_model">
+      <header>
+        The box model
+      </header>
+      <p>All HTML elements can be considered as boxes.</p>
+      <p>In CSS, the term "box model" is used when talking about design and layout.
+        The CSS box model is essentially a box that wraps around every HTML element. It consists of: margins, borders,
+        padding,
+        and the actual content. The image below illustrates the box model:</p>
+      <img src="img/=CSS_Boxmodell_changed.png">
+      <p>Explanation of the different parts:</p>
+      <li><b>Content</b> - The content of the box, where text and images appear</li>
+      <li><b>Padding</b> - Clears an area around the content. The padding is transparent</li>
+      <li><b>Border</b> - A border that goes around the padding and content</li>
+      <li><b>Margin</b> - Clears an area outside the border. The margin is transparent</li>
+      <p>The box model allows us to add a border around elements, and to define space between elements.</p>
+      <h3>Example</h3>
+      <div class="codebox">
+        <code>
             div {<br>
             width: 300px;<br>
             border: 15px solid green;<br>
@@ -92,68 +92,68 @@
             margin: 20px;<br>
             }
           </code>
-        </div>
-      </section>
-      <hr>
+      </div>
+    </section>
+    <hr>
 
-      <section class="main-section" id="CSS_Position_Property">
-        <header>
-          CSS Position Property
-        </header>
-        <p>The position property specifies the type of positioning method used for an element.</p>
-        <p>There are five different position values:</p>
-        <li>static</li>
-        <li>relative</li>
-        <li>fixed</li>
-        <li>absolute</li>
-        <li>sticky</li>
-        <p>Elements are then positioned using the top, bottom, left, and right properties. However, these properties
-          will not work
-          unless the position property is set first. They also work differently depending on the position value.
-        </p>
-        <h3>Values</h3>
-        <h4>static</h4>
-        <p>Default value. The element is in normal flow. The properties top, right, bottomor lefthave no effect.</p>
-        <h4>relative</h4>
-        <p>The element is moved from the normal flow and does not affect other elements as space is left at the original
-          position.
-          No effect is defined for table-*-group, table-row, table-column, table-cell, and elements. table-caption</p>
-        <h4>absolute</h4>
-        <p>The element is detached from the normal flow and moved independently. Other elements can be hidden in the
-          process. These
-          behave as if the element didn't exist and leave no room for the element.
-          sticky Experimental</p>
-        <h4>sticky</h4>
-        <p>A mix between fixedand relative: The element is moved from the normal flow and does not affect other elements
-          as long as
-          it is inside the viewport. As soon as it is outside, the element is released from the normal flow and remains
-          in its
-          defined position when scrolling.</p>
-        <h4>fixed</h4>
-        <p>The shift is based on the viewport. The element is removed from the normal flow and remains in its defined
-          position even
-          when scrolling. When printed, the item appears in the positioned location on each page .</p>
-        <h3>Example</h3>
-        <div class="codebox">
-          <code>p {font-size:30px; line-height:3em;}<br>
+    <section class="main-section" id="CSS_Position_Property">
+      <header>
+        CSS Position Property
+      </header>
+      <p>The position property specifies the type of positioning method used for an element.</p>
+      <p>There are five different position values:</p>
+      <li>static</li>
+      <li>relative</li>
+      <li>fixed</li>
+      <li>absolute</li>
+      <li>sticky</li>
+      <p>Elements are then positioned using the top, bottom, left, and right properties. However, these properties
+        will not work
+        unless the position property is set first. They also work differently depending on the position value.
+      </p>
+      <h3>Values</h3>
+      <h4>static</h4>
+      <p>Default value. The element is in normal flow. The properties top, right, bottomor lefthave no effect.</p>
+      <h4>relative</h4>
+      <p>The element is moved from the normal flow and does not affect other elements as space is left at the original
+        position.
+        No effect is defined for table-*-group, table-row, table-column, table-cell, and elements. table-caption</p>
+      <h4>absolute</h4>
+      <p>The element is detached from the normal flow and moved independently. Other elements can be hidden in the
+        process. These
+        behave as if the element didn't exist and leave no room for the element.
+        sticky Experimental</p>
+      <h4>sticky</h4>
+      <p>A mix between fixedand relative: The element is moved from the normal flow and does not affect other elements
+        as long as
+        it is inside the viewport. As soon as it is outside, the element is released from the normal flow and remains
+        in its
+        defined position when scrolling.</p>
+      <h4>fixed</h4>
+      <p>The shift is based on the viewport. The element is removed from the normal flow and remains in its defined
+        position even
+        when scrolling. When printed, the item appears in the positioned location on each page .</p>
+      <h3>Example</h3>
+      <div class="codebox">
+        <code>p {font-size:30px; line-height:3em;}<br>
                 div.pos {width:49%; text-align:center; border:2px solid #00f;}<br>
                 div#abs {position:absolute; bottom:0; left:0;}<br>
                 div#fix {position:fixed; bottom:0; right:0;}</code>
-        </div>
-      </section>
-      <hr>
-      <section class="main-section" id="CSS_Horizontal_and_Vertical_Align">
-        <header>
-          CSS Horizontal and Vertical Align
-        </header>
-        <h3>Center Align Elements</h3>
-        <p>To horizontally center a block element (like
-          &ltdiv&gt), use margin: auto;</p>
-        <p>Setting the width of the element will prevent it from stretching out to the edges of its container.</p>
-        <p></p>
-        <h4>Example</h4>
-        <div class="codebox">
-          <code>
+      </div>
+    </section>
+    <hr>
+    <section class="main-section" id="CSS_Horizontal_and_Vertical_Align">
+      <header>
+        CSS Horizontal and Vertical Align
+      </header>
+      <h3>Center Align Elements</h3>
+      <p>To horizontally center a block element (like
+        &ltdiv&gt), use margin: auto;</p>
+      <p>Setting the width of the element will prevent it from stretching out to the edges of its container.</p>
+      <p></p>
+      <h4>Example</h4>
+      <div class="codebox">
+        <code>
             .center {<br>
             margin: auto;<br>
             width: 50%;<br>
@@ -161,32 +161,32 @@
             padding: 10px;<br>
             }
             </code>
-        </div>
-        <h3>result</h3>
-        <div style="width:50%;border:3px solid green;padding:10px;display: flex;
+      </div>
+      <h3>result</h3>
+      <div style="width:50%;border:3px solid green;padding:10px;display: flex;
     justify-content: center;">
-          <p class="center">This div element is centered.</p>
-        </div>
-        <h3>Center Align Text</h3>
-        <p>To just center the text inside an element, use text-align: center;</p>
-        <h4>Example</h4>
-        <div class="codebox">
-          <code>
+        <p class="center">This div element is centered.</p>
+      </div>
+      <h3>Center Align Text</h3>
+      <p>To just center the text inside an element, use text-align: center;</p>
+      <h4>Example</h4>
+      <div class="codebox">
+        <code>
                     .center {<br>
                     text-align: center;<br>
                     border: 3px solid green;<br>
                     }
          </code>
-        </div>
-        <h4>result</h4>
-        <div style="text-align:center;">
-          <p class="center">This text is centered.</p>
-        </div>
-        <h3>Center an Image</h3>
-        <p>To center an image, set left and right margin to auto and make it into a block element:</p>
-        <h4>Example</h4>
-        <div class="codebox">
-          <code>
+      </div>
+      <h4>result</h4>
+      <div style="text-align:center;">
+        <p class="center">This text is centered.</p>
+      </div>
+      <h3>Center an Image</h3>
+      <p>To center an image, set left and right margin to auto and make it into a block element:</p>
+      <h4>Example</h4>
+      <div class="codebox">
+        <code>
                     img {<br>
                     display: block;<br>
                     margin-left: auto;<br>
@@ -194,240 +194,240 @@
                     width: 40%;<br>
                     }
            </code>
-        </div>
-        <h4>result</h4>
-        <div class="center">
-          <img src="img/marseille-7170837_960_720.webp" style="width:45%;display:block;">
-        </div>
-      </section>
-      <hr>
+      </div>
+      <h4>result</h4>
+      <div class="center">
+        <img src="img/marseille-7170837_960_720.webp" style="width:45%;display:block;">
+      </div>
+    </section>
+    <hr>
 
 
-      <section class="main-section" id="CSS_Background_Color_and_Image">
-        <header>
-          CSS Background Color and Image
-        </header>
-        <p>The CSS background properties are used to add background effects for elements.</p>
-        <h3>CSS background properties:</h3>
-        <li>background-color</li>
-        <li>background-image</li>
-        <h3>CSS background-color</h3>
-        <p>The background-color property specifies the background color of an element.</p>
-        <h4>Example</h4>
-        <div class="codebox">
-          <code>
+    <section class="main-section" id="CSS_Background_Color_and_Image">
+      <header>
+        CSS Background Color and Image
+      </header>
+      <p>The CSS background properties are used to add background effects for elements.</p>
+      <h3>CSS background properties:</h3>
+      <li>background-color</li>
+      <li>background-image</li>
+      <h3>CSS background-color</h3>
+      <p>The background-color property specifies the background color of an element.</p>
+      <h4>Example</h4>
+      <div class="codebox">
+        <code>
                             body {<br>
                             background-color: lightblue;<br>
                             }
                      </code>
-        </div>
-        <h4>result</h4>
-        <div>
-          <p style="background-color: lightblue; text-align: center;" class="center">The background ist lightblue.</p>
-        </div>
-        <h3>CSS background-image</h3>
-        <p>The background-image property specifies an image to use as the background of an element.</p>
-        <p>By default, the image is repeated so it covers the entire element.</p>
-        <h4>Example</h4>
-        <div class="codebox">
-          <code>
+      </div>
+      <h4>result</h4>
+      <div>
+        <p style="background-color: lightblue; text-align: center;" class="center">The background ist lightblue.</p>
+      </div>
+      <h3>CSS background-image</h3>
+      <p>The background-image property specifies an image to use as the background of an element.</p>
+      <p>By default, the image is repeated so it covers the entire element.</p>
+      <h4>Example</h4>
+      <div class="codebox">
+        <code>
     body {<br>
   background-image: url("paper.gif");<br>
   }
                      </code>
-        </div>
-        <h4>result</h4>
-        <div>
-          <p style=" background-image: url(img/paper-1074131_960_720.webp);
+      </div>
+      <h4>result</h4>
+      <div>
+        <p style=" background-image: url(img/paper-1074131_960_720.webp);
             text-align: center;" class="center">The background ist a Image.</p>
-        </div>
-      </section>
-      <hr>
+      </div>
+    </section>
+    <hr>
 
-      <section class="main-section" id="CSS_Flexbox">
-        <header>
-          CSS Flexbox
-        </header>
-        <p>The CSS background properties are used to add background effects for elements.</p>
-        <h3>CSS background properties:</h3>
-        <li>background-color</li>
-        <li>background-image</li>
-        <h3>CSS background-color</h3>
-        <p>The background-color property specifies the background color of an element.</p>
-        <h4>Example</h4>
-        <div class="codebox">
-          <code>
+    <section class="main-section" id="CSS_Flexbox">
+      <header>
+        CSS Flexbox
+      </header>
+      <p>The CSS background properties are used to add background effects for elements.</p>
+      <h3>CSS background properties:</h3>
+      <li>background-color</li>
+      <li>background-image</li>
+      <h3>CSS background-color</h3>
+      <p>The background-color property specifies the background color of an element.</p>
+      <h4>Example</h4>
+      <div class="codebox">
+        <code>
                                     body {<br>
                                     background-color: lightblue;<br>
                                     }
                              </code>
-        </div>
-        <h4>result</h4>
-        <div>
-          <p style="background-color: lightblue; text-align: center;" class="center">The background ist lightblue.</p>
-        </div>
-      </section>
-      <hr>
+      </div>
+      <h4>result</h4>
+      <div>
+        <p style="background-color: lightblue; text-align: center;" class="center">The background ist lightblue.</p>
+      </div>
+    </section>
+    <hr>
 
-      <section class="main-section" id="CSS_Flex_Container">
-        <header>
-          CSS Flex Container
-        </header>
-        <h3>The two axes of flexbox</h3>
-        <p>When working with flexbox you need to think in terms of two axes — the main axis and the cross axis. The main
-          axis is
-          defined by the flex-direction property, and the cross axis runs perpendicular to it. Everything we do with
-          flexbox
-          refers back to these axes, so it is worth understanding how they work from the outset.</p>
-        <h3>The main axis</h3>
-        <p>The main axis is defined by flex-direction, which has four possible values:</p>
-        <li>row</li>
-        <li>row-reverse</li>
-        <li>column</li>
-        <li>column-reverse</li>
-        <p>Should you choose row or row-reverse, your main axis will run along the row in the inline direction.</p>
-        <img src="img/basics1.png">
-        <p>Choose column or column-reverse and your main axis will run from the top of the page to the bottom — in the
-          block
-          direction.</p>
-        <img src="img/basics2.png">
-        <h3>The cross axis</h3>
-        <p>The cross axis runs perpendicular to the main axis, therefore if your flex-direction (main axis) is set to
-          row or
-          row-reverse the cross axis runs down the columns.</p>
-        <img src="img/basics3.png">
-        <p>If your main axis is column or column-reverse then the cross axis runs along the rows.</p>
-        <img src="img/basics4.png">
-        <h3>Start and end lines</h3>
-        <p>Another vital area of understanding is how flexbox makes no assumption about the writing mode of the
-          document. In the
-          past, CSS was heavily weighted towards horizontal and left-to-right writing modes. Modern layout methods
-          encompass the
-          range of writing modes and so we no longer assume that a line of text will start at the top left of a document
-          and run
-          towards the right-hand side, with new lines appearing one under the other.</p>
-        <p>You can read more about the relationship between flexbox and the Writing Modes specification in a later
-          article;
-          however, the following description should help explain why we do not talk about left and right and top and
-          bottom when
-          we describe the direction that our flex items flow in.</p>
-        <p>If the flex-direction is row and I am working in English, then the start edge of the main axis will be on the
-          left, the
-          end edge on the right.</p>
-        <img src="img/basics5.png">
-        <code></code>
-        <p>If I were to work in Arabic, then the start edge of my main axis would be on the right and the end edge on
-          the left.</p>
-        <img src="img/basics6.png">
-        <p>In both cases the start edge of the cross axis is at the top of the flex container and the end edge at the
-          bottom, as
-          both languages have a horizontal writing mode.</p>
-        <p>After a while, thinking about start and end rather than left and right becomes natural, and will be useful to
-          you when
-          dealing with other layout methods such as CSS Grid Layout which follow the same patterns.</p>
-      </section>
-      <hr>
+    <section class="main-section" id="CSS_Flex_Container">
+      <header>
+        CSS Flex Container
+      </header>
+      <h3>The two axes of flexbox</h3>
+      <p>When working with flexbox you need to think in terms of two axes — the main axis and the cross axis. The main
+        axis is
+        defined by the flex-direction property, and the cross axis runs perpendicular to it. Everything we do with
+        flexbox
+        refers back to these axes, so it is worth understanding how they work from the outset.</p>
+      <h3>The main axis</h3>
+      <p>The main axis is defined by flex-direction, which has four possible values:</p>
+      <li>row</li>
+      <li>row-reverse</li>
+      <li>column</li>
+      <li>column-reverse</li>
+      <p>Should you choose row or row-reverse, your main axis will run along the row in the inline direction.</p>
+      <img src="img/basics1.png">
+      <p>Choose column or column-reverse and your main axis will run from the top of the page to the bottom — in the
+        block
+        direction.</p>
+      <img src="img/basics2.png">
+      <h3>The cross axis</h3>
+      <p>The cross axis runs perpendicular to the main axis, therefore if your flex-direction (main axis) is set to
+        row or
+        row-reverse the cross axis runs down the columns.</p>
+      <img src="img/basics3.png">
+      <p>If your main axis is column or column-reverse then the cross axis runs along the rows.</p>
+      <img src="img/basics4.png">
+      <h3>Start and end lines</h3>
+      <p>Another vital area of understanding is how flexbox makes no assumption about the writing mode of the
+        document. In the
+        past, CSS was heavily weighted towards horizontal and left-to-right writing modes. Modern layout methods
+        encompass the
+        range of writing modes and so we no longer assume that a line of text will start at the top left of a document
+        and run
+        towards the right-hand side, with new lines appearing one under the other.</p>
+      <p>You can read more about the relationship between flexbox and the Writing Modes specification in a later
+        article;
+        however, the following description should help explain why we do not talk about left and right and top and
+        bottom when
+        we describe the direction that our flex items flow in.</p>
+      <p>If the flex-direction is row and I am working in English, then the start edge of the main axis will be on the
+        left, the
+        end edge on the right.</p>
+      <img src="img/basics5.png">
+      <code></code>
+      <p>If I were to work in Arabic, then the start edge of my main axis would be on the right and the end edge on
+        the left.</p>
+      <img src="img/basics6.png">
+      <p>In both cases the start edge of the cross axis is at the top of the flex container and the end edge at the
+        bottom, as
+        both languages have a horizontal writing mode.</p>
+      <p>After a while, thinking about start and end rather than left and right becomes natural, and will be useful to
+        you when
+        dealing with other layout methods such as CSS Grid Layout which follow the same patterns.</p>
+    </section>
+    <hr>
 
-      <section class="main-section" id="CSS_Properties_Flex_Items">
-        <header>
-          CSS Properties Flex Items
-        </header>
-        <h3>Properties applied to flex items</h3>
-        <p>To have more control over flex items we can target them directly. We do this by way of three properties:</p>
-        <li>flex-grow</li>
-        <li>flex-shrink</li>
-        <li>flex-basis</li>
-        <p>We will take a brief look at these properties in this overview, and you can gain a fuller understanding in
-          the guide
-          Controlling Ratios of Flex Items on the Main Axis.</p>
-        <p>Before we can make sense of these properties we need to consider the concept of available space. What we are
-          doing when
-          we change the value of these flex properties is to change the way that available space is distributed amongst
-          our items.
-          This concept of available space is also important when we come to look at aligning items.</p>
-        <p>If we have three 100 pixel-wide items in a container which is 500 pixels wide, then the space we need to lay
-          out our
-          items is 300 pixels. This leaves 200 pixels of available space. If we don't change the initial values then
-          flexbox will
-          put that space after the last item.</p>
-        <img src="img/basics7.png">
-        <p>If we instead would like the items to grow and fill the space, then we need to have a method of distributing
-          the
-          leftover space between the items. This is what the flex properties that we apply to the items themselves, will
-          do.</p>
+    <section class="main-section" id="CSS_Properties_Flex_Items">
+      <header>
+        CSS Properties Flex Items
+      </header>
+      <h3>Properties applied to flex items</h3>
+      <p>To have more control over flex items we can target them directly. We do this by way of three properties:</p>
+      <li>flex-grow</li>
+      <li>flex-shrink</li>
+      <li>flex-basis</li>
+      <p>We will take a brief look at these properties in this overview, and you can gain a fuller understanding in
+        the guide
+        Controlling Ratios of Flex Items on the Main Axis.</p>
+      <p>Before we can make sense of these properties we need to consider the concept of available space. What we are
+        doing when
+        we change the value of these flex properties is to change the way that available space is distributed amongst
+        our items.
+        This concept of available space is also important when we come to look at aligning items.</p>
+      <p>If we have three 100 pixel-wide items in a container which is 500 pixels wide, then the space we need to lay
+        out our
+        items is 300 pixels. This leaves 200 pixels of available space. If we don't change the initial values then
+        flexbox will
+        put that space after the last item.</p>
+      <img src="img/basics7.png">
+      <p>If we instead would like the items to grow and fill the space, then we need to have a method of distributing
+        the
+        leftover space between the items. This is what the flex properties that we apply to the items themselves, will
+        do.</p>
 
-        <h3>The flex-basis property</h3>
-        <p>The flex-basis is what defines the size of that item in terms of the space it leaves as available space. The
-          initial
-          value of this property is auto — in this case the browser looks to see if the items have a size. In the
-          example above,
-          all of the items have a width of 100 pixels and so this is used as the flex-basis.</p>
-        <p>If the items don't have a size then the content's size is used as the flex-basis. This is why when we just
-          declare
-          display: flex on the parent to create flex items, the items all move into a row and take only as much space as
-          they need
-          to display their contents.</p>
-        <h3>The flex-grow property</h3>
-        <p>With the flex-grow property set to a positive integer, flex items can grow along the main axis from their
-          flex-basis.
-          This will cause the item to stretch and take up any available space on that axis, or a proportion of the
-          available space
-          if other items are allowed to grow too.</p>
-        <p>If we gave all of our items in the example above a flex-grow value of 1 then the available space in the flex
-          container
-          would be equally shared between our items and they would stretch to fill the container on the main axis.</p>
-        <p>The flex-grow property can be used to distribute space in proportion. If we give our first item a flex-grow
-          value of 2,
-          and the other items a value of 1 each, 2 parts of the available space will be given to the first item (100px
-          out of
-          200px in the case of the example above), 1 part each the other two (50px each out of the 200px total).</p>
-        <h3>The flex-shrink property</h3>
-        <p>Where the flex-grow property deals with adding space in the main axis, the flex-shrink property controls how
-          it is taken
-          away. If we do not have enough space in the container to lay out our items, and flex-shrink is set to a
-          positive
-          integer, then the item can become smaller than the flex-basis. As with flex-grow, different values can be
-          assigned in
-          order to cause one item to shrink faster than others — an item with a higher value set for flex-shrink will
-          shrink
-          faster than its siblings that have lower values.</p>
-        <p>The minimum size of the item will be taken into account while working out the actual amount of shrinkage that
-          will
-          happen, which means that flex-shrink has the potential to appear less consistent than flex-grow in behavior.
-          We'll
-          therefore take a more detailed look at how this algorithm works in the article Controlling Ratios of items
-          along the
-          main axis.</p>
-        <h3>Shorthand values for the flex properties</h3>
-        <p>You will very rarely see the flex-grow, flex-shrink, and flex-basis properties used individually; instead
-          they are
-          combined into the flex shorthand. The flex shorthand allows you to set the three values in this order —
-          flex-grow,
-          flex-shrink, flex-basis.</p>
-        <p>The live example below allows you to test out the different values of the flex shorthand; remember that the
-          first value
-          is flex-grow. Giving this a positive value means the item can grow. The second is flex-shrink — with a
-          positive value
-          the items can shrink, but only if their total values overflow the main axis. The final value is flex-basis;
-          this is the
-          value the items are using as their base value to grow and shrink from.</p>
-      </section>
-      <hr>
-      <section class="main-section" id="Reference">
-        <header>Reference</header>
-        <article>
-          <ul>
-            <li>
-              All the documentation in this page is taken from
-              <a style="padding: 0px;" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide"
-                target="_blank">MDN</a>,<a style="padding: 0px;" href="https://www.w3schools.com/"
-                target="_blank">w3schools</a> and <a style="padding: 0px;" href="https://pixabay.com/"
-                target="_blank">pixabay.</a>
-            </li>
-          </ul>
-        </article>
-      </section>
-    </main>
+      <h3>The flex-basis property</h3>
+      <p>The flex-basis is what defines the size of that item in terms of the space it leaves as available space. The
+        initial
+        value of this property is auto — in this case the browser looks to see if the items have a size. In the
+        example above,
+        all of the items have a width of 100 pixels and so this is used as the flex-basis.</p>
+      <p>If the items don't have a size then the content's size is used as the flex-basis. This is why when we just
+        declare
+        display: flex on the parent to create flex items, the items all move into a row and take only as much space as
+        they need
+        to display their contents.</p>
+      <h3>The flex-grow property</h3>
+      <p>With the flex-grow property set to a positive integer, flex items can grow along the main axis from their
+        flex-basis.
+        This will cause the item to stretch and take up any available space on that axis, or a proportion of the
+        available space
+        if other items are allowed to grow too.</p>
+      <p>If we gave all of our items in the example above a flex-grow value of 1 then the available space in the flex
+        container
+        would be equally shared between our items and they would stretch to fill the container on the main axis.</p>
+      <p>The flex-grow property can be used to distribute space in proportion. If we give our first item a flex-grow
+        value of 2,
+        and the other items a value of 1 each, 2 parts of the available space will be given to the first item (100px
+        out of
+        200px in the case of the example above), 1 part each the other two (50px each out of the 200px total).</p>
+      <h3>The flex-shrink property</h3>
+      <p>Where the flex-grow property deals with adding space in the main axis, the flex-shrink property controls how
+        it is taken
+        away. If we do not have enough space in the container to lay out our items, and flex-shrink is set to a
+        positive
+        integer, then the item can become smaller than the flex-basis. As with flex-grow, different values can be
+        assigned in
+        order to cause one item to shrink faster than others — an item with a higher value set for flex-shrink will
+        shrink
+        faster than its siblings that have lower values.</p>
+      <p>The minimum size of the item will be taken into account while working out the actual amount of shrinkage that
+        will
+        happen, which means that flex-shrink has the potential to appear less consistent than flex-grow in behavior.
+        We'll
+        therefore take a more detailed look at how this algorithm works in the article Controlling Ratios of items
+        along the
+        main axis.</p>
+      <h3>Shorthand values for the flex properties</h3>
+      <p>You will very rarely see the flex-grow, flex-shrink, and flex-basis properties used individually; instead
+        they are
+        combined into the flex shorthand. The flex shorthand allows you to set the three values in this order —
+        flex-grow,
+        flex-shrink, flex-basis.</p>
+      <p>The live example below allows you to test out the different values of the flex shorthand; remember that the
+        first value
+        is flex-grow. Giving this a positive value means the item can grow. The second is flex-shrink — with a
+        positive value
+        the items can shrink, but only if their total values overflow the main axis. The final value is flex-basis;
+        this is the
+        value the items are using as their base value to grow and shrink from.</p>
+    </section>
+    <hr>
+    <section class="main-section" id="Reference">
+      <header>Reference</header>
+      <article>
+        <ul>
+          <li>
+            All the documentation in this page is taken from
+            <a style="padding: 0px;" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide"
+              target="_blank">MDN</a>,<a style="padding: 0px;" href="https://www.w3schools.com/"
+              target="_blank">w3schools</a> and <a style="padding: 0px;" href="https://pixabay.com/"
+              target="_blank">pixabay.</a>
+          </li>
+        </ul>
+      </article>
+    </section>
+  </main>
   </div>
 </body>
 
