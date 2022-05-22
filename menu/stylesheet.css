@@ -91,7 +91,7 @@ main {
 }
 
 .sakuraramen {
-  font-size: clamp(1rem, 10vh, 20rem);
+  font-size: clamp(3.2rem, 2.5143rem + 3.4286vw, 8rem);
   font-weight: bold;
 }
 
