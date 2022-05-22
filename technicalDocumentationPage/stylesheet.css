@@ -7,6 +7,7 @@ html {
 body {
   margin: 0px;
   display: flex;
+  font-size: clamp(0.8rem, 0.7rem + 0.5vw, 1.5rem);
 }
 
 .layoutside {
@@ -15,7 +16,7 @@ body {
 }
 
 .navbar {
-  width: 40%;
+  width: clamp(32rem, 21.1099rem + 26.8063vw, 64rem);
   display: flex;
   flex-direction: column;
   padding: 20px;
@@ -45,7 +46,7 @@ a:hover {
 }
 
 header {
-  font-size: 1.5em;
+  font-size: clamp(1rem, 0.8571rem + 0.7143vw, 2rem);
   text-decoration: underline;
 }
 
