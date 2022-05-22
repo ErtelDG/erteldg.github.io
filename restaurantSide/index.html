@@ -1,0 +1,184 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<script type="text/javascript"
+		src="https://cdn.jsdelivr.net/npm/cookie-bar/cookiebar-latest.min.js?tracking=1&always=1"></script>
+	<title>Mein Restaurant - Schwäbische Spezialitättem</title>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+	<style>
+		html {
+			scroll-behavior: smooth;
+		}
+
+		body {
+			font-family: 'Open Sans', sans-serif;
+			margin: 0px;
+			font-size: clamp(0.8rem, 0.7714rem + 0.1429vw, 1rem);
+		}
+
+		.header {
+			width: 100%;
+			height: 300px;
+			object-fit: cover;
+		}
+
+		.bg1 {
+			padding-left: 140px !important;
+			padding-right: 140px !important;
+			padding: 16px;
+			background-color: #f9f9f9;
+		}
+
+		.bg2 {
+			padding-left: 140px !important;
+			padding-right: 140px !important;
+			padding: 16px;
+			background-color: #f1f1f1;
+		}
+
+		.menu {
+			padding-left: 140px !important;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			right: 0px;
+			padding: 8px;
+			background-color: rgb(0, 0, 0, 0.26);
+		}
+
+		.menu a {
+			padding-right: 1vw;
+			color: white;
+			font-size: clamp(1rem, 0.9643rem + 0.1786vw, 1.25rem);
+			text-decoration: none;
+		}
+
+		.menu a:hover {
+			text-decoration: underline;
+			color: hsl(240, 23%, 88%);
+		}
+
+		.menu:hover {
+			background-color: hsl(240, 5%, 24%);
+		}
+
+		.footer {
+			padding-left: 140px !important;
+			padding-right: 140px !important;
+			padding: 16px;
+			background-color: #545454;
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.footerchild {
+			width: 30%;
+			color: white;
+		}
+	</style>
+
+</head>
+
+<body>
+	<img class="header" src="img/header.jpg">
+
+	<div class="menu">
+		<a href="#welcome">Unser Restaurant</a>
+		<a href="#menu">Speisekarte</a>
+		<a href="#opening-hours">Öffnungszeiten</a>
+		<a href="#route" ; title=Hier_findest_du_die_Adresse>Anfahrt</a>
+		<a href="#contact">Kontakt</a>
+		<a href="#impress">Impressum</a>
+	</div>
+
+	<div class="bg1" id="welcome">
+		<h1>Herzlich Willkommen</h1><br>
+		<br>
+		In unserem Restaurant verwöhnen wir Sie mit <u>regionaler</u> Küche. Feiern und Hochzeiten werden bei uns zum
+		Erfolg.<br>
+	</div>
+
+	<div class="bg2" id="opening-hours">
+		<b>Unsere Öffnungszeiten</b><br>
+		Mo - Fr: 17:00 - 22:00 Uhr<br>
+		Sa: 16:00 - 24:00 Uhr<br>
+		So: 16:00 - 23:00 Uhr<br>
+	</div>
+
+	<div class="bg1" id="route">
+		<h2>Anfahrt</h2><br>
+		Unser Restaurant findet Ihr in der <i>Münsterplatz 21, 89073 Ulm</i>. <u>Ausfahrt zweite Musterstadt</u><br>
+		<iframe
+			src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2649.021863392774!2d9.990366316141388!3d48.398523279245126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479960c04cc463a5%3A0x7d24d901ca7171e!2sUlmer%20M%C3%BCnster!5e0!3m2!1sde!2sde!4v1648399752720!5m2!1sde!2sde"
+			width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+			referrerpolicy="no-referrer-when-downgrade"></iframe>
+	</div>
+
+	<div class="bg2" id="menu">
+		<h2>Tageskarte</h2>
+
+		<table>
+			<tr>
+				<td>1</td>
+				<td>Saure Kutteln</td>
+				<td>9,90€</td>
+				<td>Kutteln mit regionale Bratkartoffeln</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>Linsen mit Spätzle</td>
+				<td>13,20€</td>
+				<td>Alb-Linsen mit Saitenwurst und Dinkelspätzle</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>Maultaschen mit Zwiebelschmelz</td>
+				<td>13,20€</td>
+				<td>Maultaschen, Zwiebelschmelz, Bratensoße und Salatteller</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>Wiener Schnitzel</td>
+				<td>19,90€</td>
+				<td>Kalbfleisch, Preiselbeeren mit Pommes Frites</td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td>Zwiebelrostbraten</td>
+				<td>21,80€</td>
+				<td>Zwiebelrostbraten, Röstzwiebeln, Bratkartoffeln und Bratensoße</td>
+			</tr>
+		</table>
+		<br>
+
+		Öffnen Sie unsere Tageskarte als <a href="downloads/tageskarte.pdf" target="_blank">pdf</a>.
+	</div>
+
+	<div class="bg1" id="contact">
+		<h2>Kontakt</h2>
+		Sie können uns gerne telefonisch oder per Email erreichen und einen Tisch reserviere.<br>
+
+		Tel.: <a href="+49 (0) 1234 567890"> +49 (0) 1234 567890</a><br>
+		E-Mail: <a href="mailto:info@mein-restaurant.de"> info@mein-restaurant.de</a><br>
+	</div>
+
+
+	<div class="footer" id="impress">
+		<div class="footerchild">
+			Copyright 2020 - Mein Fake Restaurant GbR
+		</div>
+
+		<div class="footerchild">
+			Impressum<br>
+			Kontakte<br>
+			Datenschutz<br>
+			Cookie-Richtlinien<br>
+		</div>
+	</div>
+
+
+</body>
+
+</html>
