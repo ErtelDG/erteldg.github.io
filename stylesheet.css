@@ -1,181 +1,76 @@
-html {
-  scroll-behavior: smooth;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
+body {
+  font-size: clamp(1rem, 0.9153rem + 0.678vw, 2rem);
+  display: flex;
+  justify-content: center;
+  background-color: #fafafa;
 }
 
-body {
-  background: url(img/milky-way-g0cd23a220_1920.jpg) no-repeat fixed center
-    center;
-  background-size: cover;
-  margin: 0px;
-  color: white;
-  width: 100vw;
+main {
+  width: 96rem;
+  padding: 10px;
+}
+
+.palindromeTextarea {
+  height: 200px;
+  margin-bottom: 8px;
+  width: calc(100% - 20px);
+  background-color: rgba(0, 0, 0, 0.12);
+  border-style: solid;
+  border-color: darkgray;
 }
 
 h1 {
-  font-size: clamp(2rem, 1.5714rem + 2.1429vw, 5rem);
-}
-
-h2 {
-  font-size: clamp(1.4rem, 1.1rem + 1.5vw, 3.5rem);
-}
-
-h3 {
-  font-size: clamp(1rem, 0.7857rem + 1.0714vw, 2.5rem);
-}
-
-/*h4-h5 und p Bearbeiten min. 0,6rem!!!*/
-
-h4 {
-  font-size: clamp(0.8rem, 0.6286rem + 0.8571vw, 2rem);
-}
-
-h5 {
-  font-size: clamp(0.72rem, 0.5657rem + 0.7714vw, 1.8rem);
-  margin-bottom: clamp(0.6rem, 0.4714rem + 0.6429vw, 1.5rem);
-  margin-top: clamp(0.6rem, 0.4714rem + 0.6429vw, 1.5rem);
-}
-
-p {
-  font-size: clamp(0.8rem, 0.6286rem + 0.8571vw, 2rem);
-}
-
-.welcome-section {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-}
-
-.navbar {
-  font-size: clamp(0.6rem, 0.4714rem + 0.6429vw, 1.5rem);
-  position: fixed;
-  top: 0px;
-  right: 0px;
-  height: 150px;
-  padding: 20px;
-}
-
-a {
-  color: white;
-  padding-left: clamp(0.4rem, 0.3143rem + 0.4286vw, 1rem);
-  padding-right: clamp(0.4rem, 0.3143rem + 0.4286vw, 1rem);
-}
-
-a:hover {
-  background-color: rgb(42, 111, 111);
-}
-
-.greetingSide {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100vh;
-  width: 100vw;
+  font-size: 3rem;
   text-align: center;
 }
 
-.project-side {
-  width: 100vw;
-  /*  height: 100vh;*/
+.result {
+  display: flex;
+  justify-content: space-around;
+}
+
+input {
+  font-size: clamp(1rem, 0.9153rem + 0.678vw, 2rem);
+}
+
+button {
+  font-size: clamp(0.6rem, 0.5661rem + 0.2712vw, 1rem);
   text-align: center;
+  width: clamp(15rem);
+  height: clamp(6rem);
+  font-size: clamp(1rem, 0.9153rem + 0.678vw, 1.4rem);
+  border-style: solid;
+  border-color: black;
+  border-radius: 5px;
 }
 
-.projects-section-header {
-  padding-top: clamp(3.2rem, 2.5143rem + 3.4286vw, 8rem);
-  margin-bottom: 0;
-}
-
-.headline-projects {
+.output {
+  font-size: clamp(0.6rem, 0.5661rem + 0.2712vw, 1rem);
+  width: clamp(7.5rem, 7.0763rem + 3.3898vw, 12.5rem);
+  height: clamp(3rem, 2.8305rem + 1.3559vw, 5rem);
   display: flex;
-  justify-content: space-evenly;
   align-items: center;
-}
-
-.projectblock {
-  width: 100vw;
-}
-
-.moreProjectBlocksPutInOrder {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.certificat-image {
-  height: 4rem;
-}
-
-.link-img {
-  width: clamp(10rem, 7.8571rem + 10.7143vw, 25rem);
-  height: clamp(5.6rem, 4.4rem + 6vw, 14rem);
-  object-fit: cover;
-}
-
-.projects {
-  padding: clamp(0.4rem, 0.3143rem + 0.4286vw, 1rem);
-  display: flex;
   justify-content: center;
+  width: 200px;
+  height: 80px;
+  font-size: clamp(1rem, 0.9153rem + 0.678vw, 1.4rem);
+  border-style: solid;
+  border-radius: 5px;
+  background-color: #e9e9ed;
 }
 
-.projectGroup {
+.result {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
-.project {
-  border-style: ridge;
-  /* margin-top: clamp(0.4rem, 0.3143rem + 0.4286vw, 1rem); */
-  /* margin-bottom: clamp(1.2rem, 0.9429rem + 1.2857vw, 3rem); */
-  margin: clamp(0.6rem, 0.4714rem + 0.6429vw, 1.5rem);
-}
-
-.pictureProject {
-  margin-bottom: clamp(0.6rem, 0.4714rem + 0.6429vw, 1.5rem);
-}
-
-footer {
-  display: flex;
-  justify-content: center;
-  width: 100vw;
-  height: 100vh;
-  text-align: center;
-}
-
-.contact {
-  margin-top: clamp(1.6rem, 1.2571rem + 1.7143vw, 4rem);
-  height: clamp(1.6rem, 1.2571rem + 1.7143vw, 4rem);
-  display: flex;
-  align-items: center;
-}
-
-.icon-footer {
-  height: clamp(1.2rem, 0.9429rem + 1.2857vw, 3rem);
-  width: clamp(1.2rem, 0.9429rem + 1.2857vw, 3rem);
-  object-fit: contain;
-}
-
-.link-footer {
-  display: flex;
-  align-items: center;
-  font-size: clamp(0.6rem, 0.4714rem + 0.6429vw, 1.5rem);
-}
-
-@media only screen and (max-width: 1300px) {
-  .projectGroup {
+@media only screen and (max-width: 950px) {
+  .result {
     display: flex;
-    flex-direction: column;
-    align-content: center;
-    padding-left: 20vw;
-    padding-right: 20vw;
-  }
-
-  .moreProjectBlocksPutInOrder {
-    display: flex;
-    /* justify-content: space-evenly; */
+    justify-content: space-between;
     flex-direction: column;
     align-items: center;
+    heigt: 250px;
+    height: 500px;
   }
 }
