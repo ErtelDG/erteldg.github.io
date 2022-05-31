@@ -6,48 +6,167 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="stylesheet.css">
-  <title>Document</title>
+  <title>Portfolio Webpage</title>
 </head>
 
 <body>
-  <main>
 
-    <h1>Palindrome Checker</h1>
-    <p>A palindrome is a word, number, phrase, or other sequence of characters which reads the same backward as forward,
-      such
-      as madam or racecar. There are also numeric palindromes, including date/time stamps using short digits 11/11/11
-      11:11
-      and long digits 02/02/2020. For example; Tuesday, 22 February 2022 is considered a palindrome day (22022022 using
-      dd-mm-yyyy format) as it can be read from left to right or vice versa. Sentence-length palindromes ignore
-      capitalization, punctuation, and word boundaries.</p>
-    <p>The word palindrome was introduced by Henry Peacham in 1638.[1] It is derived from the Greek roots πάλιν 'again'
-      and
-      δρóμος 'way, direction'; a different word is used in Greek, καρκινικός 'carcinic' (lit. crab-like) to refer to
-      letter-by-letter reversible writing. <a href="https://en.wikipedia.org/wiki/Palindrome">quelle wikipedia</a></p>
+  <!-- Side 1 100%x100% */ -->
+  <div id="welcome-section" class="welcome-section">
+    <header>
+      <nav id="navbar" class="navbar">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#profile-link">Contact</a>
+      </nav>
+    </header>
 
 
-
-
-    <form action="palindrom">
-      <p class="inputBox">
-        Input text: <input class="palindromeTextarea" placeholder="0_0 (: /-\ :) 0-0" " type=" text" id="textInput"
-          value="" name="textInput" size="50">
-      </p>
-    </form>
-    <div class="result">
-
-      <button id="dateText" class="dateText">Check palindrome</button>
-      <output class="output" id="result">Result</output>
-
-
-      <output class="output" id="inputTex">Input Text</output>
-      <output class="output" id="outputPalindrom">Output Palindrom</output>
-
+    <div>
+      <div id="about" class="greetingSide">
+        <h1>Hey I am Dennis</h1>
+        <p>On this Side you can see my Projects</p>
+        <p>My first projects was the Certification Projects of FreeCodeCamp.</p>
+      </div>
     </div>
-  </main>
-  <script src="script.js"></script>
+  </div>
 
-  </script>
+  <!-- Side 2 100%x100% -->
+  <main class="project-side">
+    <div id="projects">
+      <h2 class="projects-section-header">These are some of my projects</h2>
+      <div class="projects">
+        <div class="projectblock">
+          <h3>HTML/CSS</h3>
+          <div class="moreProjectBlocksPutInOrder">
+
+            <!-- Block Static Website-->
+            <div id="staticWebsite" class="containProjects">
+              <div>
+                <h4>Static Website</h4>
+              </div>
+              <div class="projectGroup">
+                <div>
+                  <!-- Project1-->
+                  <div class="project">
+                    <h5>Restaurant Side</h5>
+                    <div class="pictureProject">
+                      <a href="restaurantSide/index.html" target="_blank"><img class="link-img"
+                          src="img/screenshotRestaurantSide.png"></a>
+                    </div>
+                  </div>
+                  <!-- Project2-->
+                  <div class="project">
+                    <h5>Menu</h5>
+                    <div class="pictureProject">
+                      <a href="menu/index.html" target="_blank"><img class="link-img" src="img/screenshotMenu.png">
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Block FreeCodeCamp-->
+            <div id="freeCodeCampHtmlCss" class="containProjects">
+              <div class="headline-projects">
+                <h4>Certification Projects of FreeCodeCamp</h4>
+                <a
+                  href="https://www.freecodecamp.org/certification/fcc609331c8-e18d-476a-9987-182a2851db7d/responsive-web-design">
+                  <img class="certificat-image" src="img/certificatFreeCodeCamp.png"> </a>
+              </div>
+              <div class="projectGroup">
+                <div>
+                  <!-- Project1-->
+                  <div class="project">
+                    <h5>History of Linux</h5>
+                    <div class="pictureProject">
+                      <a href="historyOfLinux/index.html" target="_blank"><img class="link-img"
+                          src="img/screenshotHistoryOfLinux.png"></a>
+                    </div>
+                  </div>
+                  <!-- Project2-->
+                  <div class="project">
+                    <h5>Product Landing Page</h5>
+                    <div class="pictureProject">
+                      <a href="productLandingPage/index.html" target="_blank"><img class="link-img"
+                          src="img/screenshotProductLandingPage.png">
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <!-- Project3-->
+                  <div class="project">
+                    <h5>Survay Form</h5>
+                    <div class="pictureProject">
+                      <a href="survayForm/index.html" target="_blank"><img class="link-img"
+                          src="img/screenshotSurvayForm.png"></a>
+                    </div>
+                  </div>
+                  <!-- Project4-->
+                  <div class="project">
+                    <h5>Technical Documentation Page</h5>
+                    <div class="pictureProject">
+                      <a href="technicalDocumentationPage/index.html" target="_blank"><img class="link-img"
+                          src="img/screenshotTechnicalDocumentationPage.png"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Block JavaScript-->
+            <div id="staticWebsite" class="containProjects">
+              <div>
+                <h4>JavaScript</h4>
+              </div>
+              <div class="projectGroup">
+                <div>
+                  <!-- Project1-->
+                  <div class="project">
+                    <h5>Snake Game</h5>
+                    <div class="pictureProject">
+                      <a href="snakeGame/index.html" target="_blank"><img class="link-img"
+                          src="img/screenshotSnakeGame.png"></a>
+                    </div>
+                  </div>
+                  <!-- Project2-->
+                  <div class="project">
+                    <h5>Calculate Math Geometry</h5>
+                    <div class="pictureProject">
+                      <a href="mathGeometry/index.html" target="_blank"><img class="link-img"
+                          src="img/screenshotMathGeometry.png">
+                      </a>
+                    </div>
+                  </div>
+                  <!-- Project3-->
+                  <div class="project">
+                    <h5>Palindrome</h5>
+                    <div class="pictureProject">
+                      <a href="palindrome/index.html" target="_blank"><img class="link-img"
+                          src="img/screenshotPalindrome.png">
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+  </main>
+
+  <!-- footer -->
+  <footer>
+    <div class="contact">
+      <img class="icon-footer" src="./img/GitHub-Mark-Light-64px.png">
+      <div class="link-footer">
+        <a id="profile-link" href="https://github.com/Titan3070" target="_blank">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
 
 </body>
 
