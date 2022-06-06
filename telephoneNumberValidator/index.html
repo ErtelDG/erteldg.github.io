@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>Telephone Number Validator</title>
+  <link rel="stylesheet" href="stylesheet.css">
+
+</head>
+
+<body>
+  <main>
+    <h1>Telephone Number Validator</h1>
+
+    <h2>JavaScript project from FreeCodeCamp</h2>
+    <div class="blockDiv">
+      <h3>Task</h3>
+      <p>
+        Return true if the passed string looks like a valid US phone number.
+      </p>
+      <p>
+        The user may fill out the form field any way they choose as long as it has the format of a valid US number. The
+        following are examples of valid formats for US numbers (refer to the tests below for other variants):
+      </p>
+      <div class="codeBlock">
+        <code>
+    555-555-5555 <br>
+    (555)555-5555 <br>
+    (555) 555-5555 <br>
+    555 555 5555 <br>
+    5555555555 <br> 
+    1 555 555 5555 <br>
+    </code>
+      </div>
+      <p>
+        For this challenge you will be presented with a string such as 800-692-7753 or 8oo-six427676;laskdjf. Your job
+        is
+        to
+        validate or reject the US phone number based on any combination of the formats provided above. The area code is
+        required. If the country code is provided, you must confirm that the country code is 1. Return <b>true</b> if
+        the
+        string
+        is
+        a valid US phone number; otherwise return <b>false</b>.</p>
+      </p>
+      <div class="codeBlock">
+        <code>
+<b>"555-555-5555"</b> should return a boolean. <br>
+<b>"1 555-555-5555"</b> should return true. <br>
+<b>"1 (555) 555-5555"</b> should return true. <br>
+<b>"5555555555"</b> should return true. <br>
+<b>"555-555-5555"</b> should return true. <br>
+<b>"(555)555-5555"</b> should return true. <br>
+<b>"1(555)555-5555"</b> should return true. <br>
+<b>"555-5555"</b> should return false. <br>
+<b>"5555555"</b> should return false. <br>
+<b>"1 555)555-5555"</b> should return false. <br>
+<b>"1 555 555 5555"</b> should return true. <br>
+<b>"1 456 789 4444"</b> should return true. <br>
+<b>"123**&!!asdf#"</b> should return false. <br>
+<b>"55555555"</b> should return false. <br>
+<b>"(6054756961)"</b> should return false. <br>
+</code>
+        <code>
+<b>"2 (757) 622-7382"</b> should return false. <br>
+<b>"0 (757) 622-7382"</b> should return false. <br>
+<b>"-1 (757) 622-7382"</b> should return false. <br>
+<b>"2 757 622-7382"</b> should return false. <br>
+<b>"10 (757) 622-7382"</b> should return false. <br>
+<b>"27576227382"</b> should return false. <br>
+<b>"(275)76227382"</b> should return false. <br>
+<b>"2(757)6227382"</b> should return false. <br>
+<b>"2(757)622-7382"</b> should return false. <br>
+<b>"555)-555-5555"</b> should return false. <br>
+<b>"(555-555-5555"</b> should return false. <br>
+<b>"(555)5(55?)-5555"</b> should return false. <br>
+<b>"55 55-55-555-5"</b> should return false. <br>
+<b>"11 555-555-5555"</b> should return false. <br>
+     </code>
+      </div>
+    </div>
+    <div class="blockDiv">
+      <h3>Solution for Telephone Number Validator</h3>
+      <form>
+        <div class="inputOutputDiv">
+          <label for="input">Input Telephone Number: </label>
+          <input id="input" type="text" value="11 555-555-5555">
+        </div>
+        <div class="inputOutputDiv">
+          <button type="button" id="dataSend">Check Number</button>
+        </div>
+        <div class="inputOutputDiv">
+          <label for="result">Result: </label>
+        </div>
+        <output id="result">true / false</output>
+
+      </form>
+    </div>
+
+
+  </main>
+  <footer>
+
+  </footer>
+</body>
+<script src="telephoneNumberValidator.js"></script>
+
+</html>
