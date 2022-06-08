@@ -63,10 +63,12 @@ a {
   color: white;
   padding-left: clamp(0.4rem, 0.3143rem + 0.4286vw, 1rem);
   padding-right: clamp(0.4rem, 0.3143rem + 0.4286vw, 1rem);
+  text-decoration: none;
 }
 
 a:hover {
-  background-color: rgb(42, 111, 111);
+  background-color: #354671;
+  /*rgb(42, 111, 111);*/
 }
 
 .greetingSide {
