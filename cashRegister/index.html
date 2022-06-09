@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>Cash Register</title>
+  <link rel="stylesheet" href="stylesheet.css">
+
+</head>
+
+<body>
+  <main>
+    <h1>Cash Register</h1>
+
+    <h2>JavaScript project from FreeCodeCamp</h2>
+    <div class="blockDiv">
+      <h3>Task</h3>
+      <div class="text-block">
+        <p>
+          Design a cash register drawer function checkCashRegister() that accepts purchase price as the first argument
+          (price),
+          payment as the second argument (cash), and cash-in-drawer (cid) as the third argument.
+        </p>
+        <p>
+          The checkCashRegister() function should always return an object with a status key and a change key.
+        </p>
+        <p>Return {status: "INSUFFICIENT_FUNDS", change: []} if cash-in-drawer is less than the change due, or if you
+          cannot return
+          the exact change.
+        </p>
+        <p>
+          Return {status: "CLOSED", change: [...]} with cash-in-drawer as the value for the key change if it is equal to
+          the
+          change due.
+        </p>
+        <p>
+          Otherwise, return {status: "OPEN", change: [...]}, with the change due in coins and bills, sorted in highest
+          to
+          lowest
+          order, as the value of the change key.</p>
+
+        <p>
+          For this challenge you will be presented with a string such as 800-692-7753 or 8oo-six427676;laskdjf. Your job
+          is
+          to
+          validate or reject the US phone number based on any combination of the formats provided above. The area code
+          is
+          required. If the country code is provided, you must confirm that the country code is 1. Return <b>true</b> if
+          the
+          string
+          is
+          a valid US phone number; otherwise return <b>false</b>.</p>
+        </p>
+      </div>
+      <div class="task">
+        <p class="task1">
+          checkCashRegister(19.5, 20, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90],
+          ["FIVE",
+          55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 100]])<br>
+          <b>should return an object.</b>
+        </p>
+        <p class="task2">
+          checkCashRegister(19.5, 20, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90],
+          ["FIVE",
+          55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 100]])<br>
+          <b>should return {status: "OPEN", change: [["QUARTER", 0.5]]}.</b>
+        </p>
+        <p class="task1">
+          checkCashRegister(3.26, 100, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE",
+          90],
+          ["FIVE",
+          55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 100]])<br>
+          <b>should return {status: "OPEN", change: [["TWENTY", 60], ["TEN", 20], ["FIVE", 15], ["ONE", 1], ["QUARTER",
+            0.5], ["DIME", 0.2], ["PENNY", 0.04]]}.</b>
+        </p>
+        <p class="task2">
+          checkCashRegister(19.5, 20, [["PENNY", 0.01], ["NICKEL", 0], ["DIME", 0], ["QUARTER", 0], ["ONE", 0], ["FIVE",
+          0],
+          ["TEN", 0], ["TWENTY", 0], ["ONE HUNDRED", 0]])<br>
+          <b>should return {status: "INSUFFICIENT_FUNDS", change: []}.</b>
+        </p>
+        <p class="task1">
+          checkCashRegister(19.5, 20, [["PENNY", 0.01], ["NICKEL", 0], ["DIME", 0], ["QUARTER", 0], ["ONE", 1], ["FIVE",
+          0], ["TEN", 0], ["TWENTY", 0], ["ONE HUNDRED", 0]])<br>
+          <b>should return {status: "INSUFFICIENT_FUNDS", change: []}.</b>
+        </p>
+        <p class="task2">
+          checkCashRegister(19.5, 20, [["PENNY", 0.5], ["NICKEL", 0], ["DIME", 0], ["QUARTER", 0], ["ONE", 0], ["FIVE",
+          0], ["TEN", 0], ["TWENTY", 0], ["ONE HUNDRED", 0]])<br>
+          <b>should return {status: "CLOSED", change: [["PENNY", 0.5], ["NICKEL", 0], ["DIME", 0], ["QUARTER", 0],
+            ["ONE", 0], ["FIVE", 0], ["TEN", 0], ["TWENTY", 0], ["ONE HUNDRED", 0]]}.</b>
+        </p>
+      </div>
+    </div>
+    <div class="blockDiv">
+      <h3>Solution for Cash Register</h3>
+      <form>
+        <div class="inputOutputDiv">
+          <div class="priceCash">
+            <label for="input">PRICE: </label>
+            <input id="price" type="number" value=19,5>
+            <label for="input">CASH: </label>
+            <input id="cash" type="number" value=20>
+          </div>
+          <div class="cashRegister">
+            <div class="cashRegister2">
+              <label for="input">ONE HUNDRED: </label>
+              <input id="onehundred" type="number" value=100>
+              <label for="input">TWENTY: </label>
+              <input id="twenty" type="number" value=60>
+              <label for="input">TEN: </label>
+              <input id="ten" type="number" value=20>
+              <label for="input">FIVE: </label>
+              <input id="five" type="number" value=55>
+              <label for="input">ONE: </label>
+              <input id="one" type="number" value=90>
+
+
+
+            </div>
+            <div class="cashRegister2">
+              <label for="input">QUARTER: </label>
+              <input id="quarter" type="number" value=4,25>
+              <label for="input">DIME: </label>
+              <input id="dime" type="number" value=3,10>
+              <label for="input">NICKEL: </label>
+              <input id="nickel" type="number" value=2,05>
+              <label for="input">PENNY: </label>
+              <input id="penny" type="number" value=1,01>
+
+
+            </div>
+
+          </div>
+        </div>
+        <div class="inputOutputDiv">
+          <button type="button" id="dataSend">Check Cash Register</button>
+        </div>
+        <div class="inputOutputDiv">
+          <label for="result">Result: </label>
+        </div>
+        <output id="result">status</output>
+
+      </form>
+    </div>
+
+
+  </main>
+  <footer>
+
+  </footer>
+</body>
+<script src="cashRegiter.js"></script>
+
+</html>
