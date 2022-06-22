@@ -1,1 +1,39 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8" />
+    <title>To Do List</title>
+    <link rel="stylesheet" href="stylesheet.css" />
+  </head>
+  <body>
+    <main>
+      <div id="toDoListDiv">
+        <h1 class="backgroundColor">To Do Liste</h1>
+        <div id="inputDiv" class="backgroundColor">
+          <input
+            type="text"
+            id="toDoInput"
+            onkeyup="checkKey()"
+            placeholder="To do ...."
+          />
+          <button id="onClick" onclick="addToDoNew()" type="button">Add</button>
+        </div>
 
+        <table>
+          <thead>
+            <th id="toDoTableHead">To do ...</th>
+            <th id="deletedTableHead">Deleted</th>
+          </thead>
+          <tbody id="tableBody">
+            <tr>
+              <td class="toDoTable checked">Text To Do......</td>
+              <td class="deletedTable">Del</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+    <footer></footer>
+  </body>
+  <script src="toDoList.js"></script>
+</html>
