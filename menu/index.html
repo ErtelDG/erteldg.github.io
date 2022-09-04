@@ -20,16 +20,20 @@
 
 <body>
   <main>
+
     <!--Kopf Head der Seite-->
     <article class="thebestramenintown">
-
+      <div class="box-flag">
+        <a href="#" onclick="languageEnglish()"> <img class="flag" src="img/britain-flag.png" alt="britain-flag"></a>
+        <a href="#" onclick="languageGerman()"> <img class="flag" src="img/germany-flag.png" alt="germany-flag"></a>
+      </div>
       <section class="haedsakuraramenintown">
 
         <img class=imgsaku src="img/saku.png">
         <nav class="topnavigation hide-mobile">
-          <div><a href="#ourmenu">MENU</a></div>
-          <div><a href="#findus">LOCATION</a></div>
-          <div><a href="#aboutus">ABOUT</a></div>
+          <div><a href="#ourmenu" id="menu">MENU</a></div>
+          <div><a href="#findus" id="location">LOCATION</a></div>
+          <div><a href="#aboutus" id="about">ABOUT</a></div>
           <div class="headtelephone">
             <div>
               <a href="tel: +49 176 54564534">
@@ -48,7 +52,7 @@
 
       <section class="slogan">
         <div class="sakuraramen">SAKURA RAMEN</div>
-        <div class="thebest">THE BEST RAMEN IN TOWN</div>
+        <div class="thebest" id="thebest">THE BEST RAMEN IN TOWN</div>
 
       </section>
 
@@ -58,20 +62,20 @@
     <article class="howtoorder">
 
       <head>
-        <div class="titelhowtoorder">HOW TO ORDER</div>
+        <div class="titelhowtoorder" id="howToOrder">HOW TO ORDER</div>
       </head>
       <article class="tablehowtoorder">
         <section>
           <div class="menutablehowtoorder"><img src="img/bowl_icon.jpg"></div>
-          <div class="texttablehowtoorder">Pick Your Noodle</div>
+          <div class="texttablehowtoorder" id="pickYourNoodle">Pick Your Noodle</div>
         </section>
         <section>
           <div class="menutablehowtoorder"><img src="img/broth_icon.png"></div>
-          <div class="texttablehowtoorder">Pick Your Brath</div>
+          <div class="texttablehowtoorder" id="pickYourBrath">Pick Your Brath</div>
         </section>
         <section>
           <div class="menutablehowtoorder"><img src="img/eggs_icon.jpg"></div>
-          <div class="texttablehowtoorder">Add Your Toppings</div>
+          <div class="texttablehowtoorder" id="addYourTopping">Add Your Toppings</div>
         </section>
       </article>
     </article>
@@ -89,15 +93,15 @@
           </thead>
           <tbody>
             <tr>
-              <th>CHICKEN</th>
+              <th name="chicken">CHICKEN</th>
               <td>11.95€</td>
             </tr>
             <tr>
-              <th>BEEF</th>
+              <th name="beef">BEEF</th>
               <td>12.95€</td>
             </tr>
             <tr>
-              <th>SHRIMPS</th>
+              <th name="shrimps">SHRIMPS</th>
               <td>13.95€</td>
             </tr>
           </tbody>
@@ -112,15 +116,15 @@
           </thead>
           <tbody>
             <tr>
-              <th>CHICKEN</th>
+              <th name="chicken">CHICKEN</th>
               <td>11.95€</td>
             </tr>
             <tr>
-              <th>BEEF</th>
+              <th name="beef">BEEF</th>
               <td>12.95€</td>
             </tr>
             <tr>
-              <th>SHRIMPS</th>
+              <th name="shrimps">SHRIMPS</th>
               <td>13.95€</td>
             </tr>
           </tbody>
@@ -138,15 +142,15 @@
           </thead>
           <tbody>
             <tr>
-              <th>CHICKEN</th>
+              <th name="chicken">CHICKEN</th>
               <td>11.95€</td>
             </tr>
             <tr>
-              <th>BEEF</th>
+              <th name="beef">BEEF</th>
               <td>12.95€</td>
             </tr>
             <tr>
-              <th>SHRIMPS</th>
+              <th name="shrimps">SHRIMPS</th>
               <td>13.95€</td>
             </tr>
           </tbody>
@@ -157,8 +161,8 @@
     <article>
       <!--Bereich Finde uns Find us-->
 
-      <article id="findus" class="findus2">
-        <section class="headfindus">
+      <article class="findus2">
+        <section id="findus" class="headfindus">
           FIND US AT
         </section>
 
@@ -191,6 +195,8 @@
     </footer>
 
   </main>
+
+  <script src="app.js"></script>
 </body>
 
 </html>

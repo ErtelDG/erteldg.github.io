@@ -91,7 +91,7 @@ main {
 }
 
 .sakuraramen {
-  font-size: clamp(3.2rem, 2.5143rem + 3.4286vw, 8rem);
+  font-size: clamp(1rem, 10vh, 20rem);
   font-weight: bold;
 }
 
@@ -246,6 +246,22 @@ footer {
 .externicon {
   margin-right: 15px;
   margin-left: 15px;
+}
+
+.flag {
+  height: 20px;
+  width: 40px;
+  object-fit: contain;
+  margin: 5px 10px 5px 10px;
+  border-style: solid;
+  border-color: white;
+  border-radius: 10px;
+}
+
+.box-flag {
+  display: flex;
+  flex-flow: row-reverse;
+  margin: 10px;
 }
 
 @media (max-width: 800px) {
