@@ -1,0 +1,247 @@
+<div class="contacts_container blur_container" id="contactsContainer">
+    <div class="contacts">
+        <div class="listning" id="listning"></div>
+
+        <div class="right_side" id="right_side">
+            <img src="assets/img/icon_close.png" alt="close" onclick="closeContact()" class="closeContact">
+            <div class="right_side_contacts">
+                <h1>Contacts</h1>
+                <img class="img-separation" src="img/separation.png">
+                <h4>Better with a team</h4>
+            </div>
+            <div class="full_contact_Info_Container d-none" id="full_contact_Info_Container"></div>
+
+        </div>
+        <div class="new_contact_button cursor-pointer " id="newContact" onclick="openNewContactWindow()">
+            <p>New contact</p>
+            <img src="img/addcontact .png">
+        </div>
+    </div>
+</div>
+
+
+<div class="d-none" id="popupAddContact">
+    <div class="popup_window">
+
+        <div class="popup_left">
+            <div class="container-left-popup-text">
+                <div class="popup_left_img">
+                    <img src="img/joinlogo4.png">
+                </div>
+                <h1>Add contact</h1>
+                <p>Tasks are better with a team!</p>
+                <div class="underline_img"></div>
+            </div>
+        </div>
+
+        <div class="popup_right">
+            <div class="close_contact_popup" id="closeContactWindow" onclick="closeNewContactWindow()">
+                <img id="close_contact_btn" class="close-black" src="img/clear.png">
+                <img id="close_contact_btn_grey" class="close-white" src="img/clearGrey.png">
+            </div>
+            <form class="form_add_contact_popup" action="" onsubmit="getInfoFromNewContactField(); return false;">
+                <div class="fill_in_fields">
+                    <div class="first_name">
+                        <input type="text" placeholder="First name" minlength="3" id="firstname" required>
+                        <img src="img/profileicon3.png">
+                    </div>
+                    <div class="last_name">
+                        <input type="text" placeholder="Last name" minlength="3" id="secondname" required>
+                        <img src="img/profileicon3.png">
+                    </div>
+                    <div class="email_field">
+                        <input type="email" placeholder="Email" id="email" required>
+                        <img src="img/mailicon.png">
+                    </div>
+                    <div class="phone_field">
+                        <input type="tel" placeholder="Phone" id="phone" required>
+                        <img src="img/phone-line.png">
+                    </div>
+                    <div class="contain-button-create-contacts">
+                        <div class="popup_right_buttons">
+                            <div class="cancel" onclick="closeNewContactWindow()">
+                                <p>Cancel</p>
+                                <img src="img/clear.png">
+                            </div>
+                            <button class="create_contact">
+                                <p>Create contact</p>
+                                <img src="img/create_task.png">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="popup_right_profile">
+            <img src="img/profileicon2.png">
+        </div>
+    </div>
+</div>
+
+<div class="popup d-none" id="popupEditContact">
+    <div class="popup_window">
+
+        <div class="popup_left">
+            <div class="container-left-popup-text">
+                <div class="popup_left_img">
+                    <img src="img/joinlogo4.png">
+                </div>
+                <h1>Edit contact</h1>
+                <p>Tasks are better with a team!</p>
+                <div class="underline_img"></div>
+            </div>
+        </div>
+
+        <div class="popup_right">
+            <div class="close_contact_popup" id="edit_closeContactWindow" onclick="closeEditContactWindow()"> <img
+                    id="edit_close_contact_btn" class="close-black" src="img/clear.png">
+                <img id="edit_close_contact_btn_grey" class="close-white" src="img/clearGrey.png">
+            </div>
+            <form class="form_add_contact_popup" action="" onsubmit="editcontact(); return false;">
+                <div class="fill_in_fields">
+                    <div class="first_name">
+                        <input type="text" placeholder="First name" minlength="3" id="edit_firstname" required>
+                        <img src="img/profileicon3.png">
+                    </div>
+                    <div class="last_name">
+                        <input type="text" placeholder="Last name" minlength="3" id="edit_secondname" required>
+                        <img src="img/profileicon3.png">
+                    </div>
+                    <div class="email_field">
+                        <input type="email" placeholder="Email" id="edit_email" required>
+                        <img src="img/mailicon.png">
+                    </div>
+                    <div class="phone_field">
+                        <input type="tel" placeholder="Phone" id="edit_phone" required>
+                        <img src="img/phone-line.png">
+                    </div>
+                    <div class="contain-button-create-contacts">
+                        <div class="popup_right_buttons">
+                            <div class="cancel" onclick="closeEditContactWindow()">
+                                <p>Cancel</p>
+                                <img src="img/clear.png">
+                            </div>
+                            <button class="create_contact">
+                                <p>Edit contact</p>
+                                <img src="img/create_task.png">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="popup_right_profile">
+            <img src="img/profileicon2.png">
+        </div>
+    </div>
+</div>
+
+<form id="popup-contact" class="popup d-none" onsubmit="createTodoPopupContacts(); return false;">
+    <div id="popup-windowContacts" class="add-task-pop-up">
+        <div onclick="closeFormContacts()" class="cross-popup"><img src="assets/img/board/close-popup.svg"></div>
+        <div class="padding-popup-box">
+
+            <h1>Add Task</h1>
+            <div class="container-for-seperate-left-and-right-content-popup">
+                <div class="first-container-popup">
+
+                    <h2>Title</h2>
+                    <input class="title-popup" type="text" id="titlePopupContacts" name="title"
+                        placeholder="Enter a title" 
+                        required>
+
+                    <h2>Description</h2>
+                    <textarea class="description-popup" type="text" id="descriptionPopupContacts"
+                        name="descriptionPopup" rows="5" cols="20" placeholder="Enter a Description"
+                        required></textarea>
+
+                    <h2>Category</h2>
+                    <select class="category-popup" id="category-popupContacts">
+                        <option value="Sales">Sales</option>
+                        <option value="Design">Design</option>
+                        <option value="Backoffice">Backoffice</option>
+                        <option value="Marketing">Marketing</option>
+                        <option value="IT">IT</option>
+                        <option value="Media">Media</option>
+                    </select><br>
+
+                    <h2>Assigned to</h2>
+                    <form class="margin-popup">
+                        <div class="multiselect">
+                            <div class="selectBox" onclick="setAllUserAndContactsToAssignedContacts()">
+                                <select class="assignedto-popup">
+                                    <option>Select an option</option>
+                                </select>
+                                <div class="overSelect"></div>
+                            </div>
+                            <div id="assignedto-popupContacts" class="category-popup"></div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="seperate-line-popup"></div>
+
+                <div class="second-container-popup">
+                    <h2>Due Date</h2>
+                    <input class="duedate-popup" type="date" id="duedatePopupContacts" name="duedate" required>
+
+                <h2>Prio</h2>
+                    <div class="prio-popup">
+                        <div id="urgentPopupContacts" onclick="changeColorUrgentContacts()" class="urgent-popup">
+                            Urgent
+                            <div class="urgent-popup-child">
+                                <div class="position-urgent-arrow-popup-first"><img id="urgentFirstPopupContacts"
+                                        src="assets/img/board/arrow-urgent.svg"></div>
+                                <div class="position-urgent-arrow-popup-second"><img id="urgentSecondPopupContacts"
+                                        src="assets/img/board/arrow-urgent.svg"></div>
+                            </div>
+                        </div>
+                        <div id="mediumPopupContacts" onclick="changeColorMediumContacts()" class="medium-popup">Medium
+                            <div class="medium-popup-child">
+                                <div class="position-medium-arrow-popup-firstPopup"><img id="mediumFirstPopupContacts"
+                                        src="assets/img/board/arrow-medium.svg"></div>
+                                <div class="position-medium-arrow-popup-secondPopup"><img id="mediumSecondPopupContacts"
+                                        src="assets/img/board/arrow-medium.svg">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="lowPopupContacts" onclick="changeColorLowContacts()" class="low-popup">Low
+                            <div class="low-popup-child">
+                                <div class="position-low-arrow-popup-firstPopup"><img id="lowFirstPopupContacts"
+                                        src="assets/img/board/arrow-low.svg"></div>
+                                <div class="position-low-arrow-popup-secondPopup"><img id="lowSecondPopupContacts"
+                                        src="assets/img/board/arrow-low.svg"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                <h2>Subtasks</h2>
+                <div class="subtasksContainer">
+                    <input class="addTaskSubTasksInput" id="addSubtasksInputPopupContacts" type="text"
+                        placeholder="Add new subtask">
+                    <img class="subTasksCrossPopup" src="assets/img/addTask_cross.png"
+                        onclick="addSubtaskPopupContacts()">
+                        </div>
+                    <div class="subTaskFrame" id="addSubtasksListPopupContacts">
+                    </div>
+                    <div class="btn-popup">
+                        <button  type="button" onclick="closeFormContacts()" id="btn-firstPopupContacts" class="first-btn">Cancel<img
+                                class="cross-popup-btn" src="assets/img/board/close-popup.svg"></button>
+                        <button type="submit" value="submit" class="second-btn">Create Task<img
+                                src="assets/img/board/hook-popup.svg"></button>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+</form>
+<div class="Notification d-none" id="createNotificationContacts">
+    Task created!
+</div>
+<div class="Notification d-none" id="createNotificationContactsAdd">
+    Contact created!
+</div>

@@ -1,0 +1,9 @@
+# robots search engines prohibit to access the following pages:
+
+User-agent: *
+
+Disallow: /landingpage.html
+Disallow: /assets/
+Disallow: /js/
+Disallow: /loginLogout/
+Disallow: /templates/

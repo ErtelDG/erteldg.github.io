@@ -1,0 +1,166 @@
+<!-- <p class="addTaskMobileHeadline">Kanban Project Management Tool</p> -->
+<div class="openTask z-1" id="openTask"></div>
+<div id="mainContainer" class="main-container">
+
+    <div class="first-container">
+        <h1 class="h1-board">Board</h1>
+        <div class="inputfield-and-button">
+            <div class="inputfield-container">
+                <input onkeydown="deleteIconInSearchInputField()" onkeyup="loadIconAndLine(), filterTasks()"
+                    class="inputfield" type="text" id="searchTask" name="searchTask" placeholder="Find Task">
+                <div id="line" class="line-container"><span class="line"></span></div>
+                <div id="iconSearch" class="search-container">
+                    <img src="assets/img/board/search-icon.svg">
+                </div>
+
+            </div>
+
+
+            <button onclick="openForm()" class="btn-board">Add Task <img class="icon-plus"
+                    src="assets/img/board/plus-icon.png"></button>
+        </div>
+    </div>
+
+    <div class="second-container" id="second-container">
+
+        <div ondrop="moveTo('todo')" ondragover="allowDrop(event)" class="container-tasks">
+            <div id="todoChild" onclick="openForm()" class="child-container-tasks">
+                <div class="title-area">To do</div>
+                <!-- <img class="plus-button" src="assets/img/board/plus-button.svg"> -->
+            </div>
+            <div id="todo">
+
+            </div>
+        </div>
+
+        <div ondrop="moveTo('inProgress')" ondragover="allowDrop(event)" class="container-tasks">
+            <div id=" todoChild" onclick="openForm()" class="child-container-tasks">
+                <div class="title-area">In Progress</div>
+                <!-- <img class="plus-button" src="assets/img/board/plus-button.svg"> -->
+            </div>
+            <div id="inProgress">
+
+            </div>
+        </div>
+
+        <div ondrop="moveTo('awaitingFeedback')" ondragover="allowDrop(event)" class="container-tasks">
+            <div id="todoChild" onclick="openForm()" class="child-container-tasks">
+                <div class="title-area">Awaiting Feedback</div>
+                <!-- <img class="plus-button" src="assets/img/board/plus-button.svg"> -->
+            </div>
+            <div id="awaitingFeedback">
+
+            </div>
+        </div>
+
+        <div ondrop="moveTo('done')" ondragover="allowDrop(event)" class="container-tasks">
+            <div id=" todoChild" onclick="openForm()" class="child-container-tasks">
+                <div class="title-area">Done</div>
+                <!-- <img class="plus-button" src="assets/img/board/plus-button.svg"> -->
+            </div>
+            <div id="done">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<form id="popup" class="popup d-none" onsubmit="createTodoPopup(); return false;">
+    <div id="popup-window" class="add-task-pop-up">
+        <div onclick="closeForm()" class="cross-popup"><img src="assets/img/board/close-popup.svg"></div>
+        <div class="padding-popup-box">
+
+            <h1>Add Task</h1>
+            <div class="container-for-seperate-left-and-right-content-popup">
+                <div class="first-container-popup">
+
+                    <h2>Title</h2>
+                    <input class="title-popup" type="text" id="titlePopup" name="title" placeholder="Enter a title"
+                        required>
+
+                    <h2>Description</h2>
+                    <textarea class="description-popup" type="text" id="descriptionPopup" name="descriptionPopup"
+                        rows="5" cols="20" placeholder="Enter a Description" required></textarea>
+
+                    <h2>Category</h2>
+                    <select class="category-popup" id="category-popup">
+                        <option value="Sales">Sales</option>
+                        <option value="Design">Design</option>
+                        <option value="Backoffice">Backoffice</option>
+                        <option value="Marketing">Marketing</option>
+                        <option value="IT">IT</option>
+                        <option value="Media">Media</option>
+                    </select><br>
+
+                    <h2>Assigned to</h2>
+                    <form class="margin-popup">
+                        <div class="multiselect">
+                            <div class="selectBox" onclick="setAllUserAndContactsAssignedToPopup()">
+                                <select class="assignedto-popup">
+                                    <option>Select an option</option>
+                                </select>
+                                <div class="overSelect"></div>
+                            </div>
+                            <div id="assignedto-popup" class="category-popup"></div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="seperate-line-popup"></div>
+
+                <div class="second-container-popup">
+                    <h2>Due Date</h2>
+                    <input class="duedate-popup" type="date" id="duedatePopup" name="duedate" required>
+
+                    <h2>Prio</h2>
+                    <div class="prio-popup">
+                        <div id="urgentPopup" onclick="changeColorUrgent()"
+                        class="urgent-popup">
+                        Urgent
+                            <div class="urgent-popup-child">
+                                <div class="position-urgent-arrow-popup-first"><img id="urgentFirstPopup"
+                                        src="assets/img/board/arrow-urgent.svg"></div>
+                                <div class="position-urgent-arrow-popup-second"><img id="urgentSecondPopup"
+                                        src="assets/img/board/arrow-urgent.svg"></div>
+                            </div>
+                        </div>
+                        <div id="mediumPopup" onclick="changeColorMedium()" class="medium-popup">Medium
+                            <div class="medium-popup-child">
+                                <div class="position-medium-arrow-popup-firstPopup"><img id="mediumFirstPopup"
+                                        src="assets/img/board/arrow-medium.svg"></div>
+                                <div class="position-medium-arrow-popup-secondPopup"><img id="mediumSecondPopup"
+                                        src="assets/img/board/arrow-medium.svg"></div>
+                            </div>
+                        </div>
+                        <div id="lowPopup" onclick="changeColorLow()" class="low-popup">Low
+                            <div class="low-popup-child">
+                                <div class="position-low-arrow-popup-firstPopup"><img id="lowFirstPopup"
+                                        src="assets/img/board/arrow-low.svg"></div>
+                                <div class="position-low-arrow-popup-secondPopup"><img id="lowSecondPopup"
+                                        src="assets/img/board/arrow-low.svg"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2>Subtasks</h2>
+                    <div class="subtasksContainer">
+                        <input class="addTaskSubTasksInput" id="addSubtasksInputPopup" type="text"
+                            placeholder="Add new subtask">
+                        <img class="subTasksCrossPopup" src="assets/img/addTask_cross.png" onclick="addSubtaskPopup()">
+                    </div>
+                    <div class="subTaskFrame" id="addSubtasksListPopup"></div>
+
+                    <div class="btn-popup">
+                        <button type="button" onclick="closeForm()" id="btn-firstPopup" class="first-btn">Cancel<img
+                                class="cross-popup-btn" src="assets/img/board/close-popup.svg"></button>
+                        <button type="submit" value="submit" class="second-btn">Create Task<img
+                                src="assets/img/board/hook-popup.svg"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+<div class="Notification d-none" id="createNotificationBoard">
+    Task created!
+</div>

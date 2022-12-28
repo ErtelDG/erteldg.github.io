@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=0.99">
+   <title>El Pollo Loco</title>
+   <link rel="shortcut icon" href="#" type="image/x-icon">
+   <link rel="stylesheet" href="style.css">
+   <script src="models/L0_drawable-object.class.js"></script>
+   <script src="models/L0_status-bar-hp.class.js"></script>
+   <script src="models/L0_status-bar-bottle.class.js"></script>
+   <script src="models/L0_status-bar-coin.class.js"></script>
+   <script src="models/L0_status-bar-hp-endboss.class.js"></script>
+   <script src="models/L0_world.class.js"></script>
+   <script src="models/L1_movable-object.class.js"></script>
+   <script src="models/L2_character.class.js"></script>
+   <script src="models/L2_background-object.class.js"></script>
+   <script src="models/L2_cloud.class.js"></script>
+   <script src="models/L2_chicken.class.js"></script>
+   <script src="models/L2_dead-chicken.class.js"></script>
+   <script src="models/L2_dead-endboss.js"></script>
+   <script src="models/L2_coin.class.js"></script>
+   <script src="models/L2_bottle-object.class.js"></script>
+   <script src="models/L1_level.class.js"></script>
+   <script src="levels/level1.js"></script>
+   <script src="models/L2_throwable-object.class.js"></script>
+   <script src="models/L2_splash-bottle-object.class.js"></script>
+   <script src="models/L1_keyboardKey.class.js"></script>
+   <script src="models/L2_endboss.class.js"></script>
+   <link rel="shortcut icon" href="img/favicon_el_pollo_loco-min.png" type="image/x-icon">
+
+
+</head>
+
+<body>
+   <!-- starts screen -->
+   <!-- style="display: none;" -->
+   <div id="startScreen" class="startScreen">
+      <div class="contain-startscreen-elements">
+         <h1>El Pollo Loco</h1>
+         <img id="start_img_game_design" src="img/10_design/start_img_game_design.PNG" alt="">
+         <div class="button" id="button-7" onclick="init()">
+            <div id="dub-arrow"><img src="img/10_design/iconmonstr-arrow-48-240.png" alt="" /></div>
+            <a href="">Let's Start!</a>
+         </div>
+         <div class="control-btn-explanation-service">
+            <div class="flex-contain">
+               <div id="contain1-explanation" class="contains-explanation">
+                  <div class="panel size2rem2rem">
+                     <img src="img/10_design/arrow.png" class="icons-img arrow-left" alt="">
+                  </div>
+                  <div class="explanation-text">Turn left</div>
+               </div>
+               <div id="contain2-explanation" class="contains-explanation">
+                  <div class="panel size2rem2rem"><img src="img/10_design/arrow.png" class="icons-img" alt=""></div>
+                  <div class="explanation-text">Turn right</div>
+               </div>
+               <div id="contain3-explanation" class="contains-explanation">
+                  <div class="panel size2rem2rem"><img src="img/10_design/arrow.png" class="icons-img arrow-up" alt="">
+                  </div>
+                  <div class="explanation-text">Jump</div>
+               </div>
+            </div>
+
+            <div class="flex-contain">
+               <div id="contain4-explanation" class="contains-explanation">
+                  <div class="panel size2rem2rem"><img src="img/10_design/arrow-jump.png" class="icons-img arrow-jump"
+                        alt="">
+                  </div>
+                  <div class="explanation-text">Throw - D</div>
+               </div>
+               <div id="contain5-explanation" class="contains-explanation">
+                  <div class="panel size2rem2rem"><img src="img/10_design/play.png" class="icons-img" alt="">
+                  </div>
+                  <div class="explanation-text">Go / Restart</div>
+               </div>
+               <div id="contain6-explanation" class="contains-explanation">
+                  <div class="panel size2rem2rem"><img src="img/10_design/sound-on-icon.png" class="icons-img" alt="">
+                  </div>
+                  <div class="explanation-text">Music On/Off</div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <div id="startSide" class="hidden-gameplay-screen">
+      <!-- game -->
+      <h1 class="h1-pollo-loco" class="hidden">El Pollo Loco
+
+      </h1>
+      <div id="fullscreen">
+         <canvas id="canvas" width="720" height="400"></canvas>
+         <div id="icon-contain-h1-position" class="icon-contain-h1-position icon-contain-h1-position-border">
+            <div id="iconPanelBtn" class="icon-contain-h1">
+               <div class="h1-icon panel">
+                  <img class="icons-img" onclick="setPanelOnOff()" src="img/10_design/show-button.png">
+               </div>
+               <div> Keyboard Description On/Off</div>
+            </div>
+            <div class="icon-contain-h1">
+               <div id="openFullscreenBtn" class="h1-icon panel">
+                  <img class="icons-img" onclick="setFullscreen()" src="img/10_design/full-screen.png">
+               </div>
+               <div id="closeFullscreenBtn" class="h1-icon panel exitFullscreenHidden" onclick="closeFullscreen()">
+                  <img class="icons-img" onclick="closeFullscreen()" src="img/10_design/exit-fullscreen.png">
+               </div>
+               <div>Fullsceen On/Off</div>
+            </div>
+
+         </div>
+         <div id="control-btn" class="control-btn hidden-element">
+            <div class="panel-contain">
+               <div id="arrow-left" class="panel arrow-left pointer"><img src="img/10_design/arrow.png"
+                     class="icons-img" alt=""></div>
+               <div class="text-panel">Left</div>
+               <div id="arrow-right" class="panel arrow-right pointer"><img src="img/10_design/arrow.png"
+                     class="icons-img" alt=""></div>
+               <div class="text-panel">Right
+               </div>
+            </div>
+            <div class="panel-contain mid-panel-contain-hidden">
+               <div id="start-icon" class="panel pointer" onclick="restart()"><img src="img/10_design/play.png"
+                     class="icons-img" alt="">
+               </div>
+               <div class="text-panel">Restart</div>
+
+               <!-- <div id="small-screen-icon-text" class="text-panel exitFullscreenHidden">Close Fullscreen</div> -->
+               <div id="sound-icon" class="panel pointer" onclick="soundOnOff()"><img id="sound-icon-img"
+                     src="img/10_design/sound-on-icon.png" class="icons-img" alt=""></div>
+
+               <div class="text-panel">Sound On/Off</div>
+            </div>
+            <div class="panel-contain">
+               <div id="arrow-up" class="panel arrow-up pointer"><img src="img/10_design/arrow.png" class="icons-img"
+                     alt="">
+               </div>
+               <div class="text-panel">Jump</div>
+               <div id="throw-bottle" class="panel arrow-jump pointer"><img src="img/10_design/arrow-jump.png"
+                     class="icons-img" alt="">
+               </div>
+               <div class="text-panel">Throw - D</div>
+            </div>
+         </div>
+
+      </div>
+   </div>
+   <div id="end-screen" class="end-screen endscreen-hidden">
+      <div id="game-over-container" class="game-over-container endscreen-hidden">Game Over!
+         <div class="pointer hover-mouse" onclick="restart()">Restart</div>
+      </div>
+      <div id="win-container" class="win-container endscreen-hidden">You Win!
+         <div class="pointer hover-mouse" onclick="restart()">Restart</div>
+      </div>
+   </div>
+   <script src="js/game.js"></script>
+</body>
+
+</html>

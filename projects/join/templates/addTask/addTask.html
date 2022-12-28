@@ -1,0 +1,95 @@
+<div class="addTaskMain">
+    <form class="formAddTask" onsubmit="createTodoFromAddTask(); return false;">
+        <div class="popupBox">
+            <!-- <p class="addTaskMobileHeadline">Kanban Project Management Tool</p> -->
+            <h1>Add Task</h1>
+            <div class="container-for-seperate-left-and-right-content">
+                <div class="firstContainer">
+                    <h2 for="title">Title</h2>
+                    <input class="title-popup" type="text" id="title" name="title" placeholder="Enter a title" required>
+
+                    <h2 for="descriptionPopup">Description</h2>
+                    <textarea class="description-popup" type="text" id="description" name="descriptionPopup" rows="5"
+                        cols="20" placeholder="Enter a Description" required></textarea>
+
+                    <h2 for="category-popup">Category</h2>
+                    <div id="headerCategory"></div>
+                    <select class="category-popup" id="category" placeholder="NEW"
+                        onchange='if(this.value == "New Category"){createNewCategory()}'>
+                    </select>
+
+
+
+                    <h2 for="assignedto-popup">Assigned to</h2>
+                    <form>
+                        <div class="multiselect">
+                            <div class="selectBox" onclick="setAllUserAndContactsToAssigned()">
+                                <select class="assignedto-popup">
+                                    <option>Select an option</option>
+                                </select>
+                                <div class="overSelect"></div>
+                            </div>
+                            <div id="assignedto" class="assignedToSelect"></div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="seperate-line"></div>
+
+                <div class="secondContainer">
+                    <h2 for="duedate">Due Date</h2>
+                    <input class="duedate-popup" type="date" id="duedate" name="duedate" required>
+
+                    <h2>Prio</h2>
+                    <div class="prio-popup">
+                        <div id="urgentAddTask" onclick="changeColorUrgentAddTask()" class="urgent-popup">
+                            Urgent
+                            <div class="urgent-popup-child">
+                                <div class="position-urgent-arrow-popup-first"><img id="urgentFirstAddTask"
+                                        src="assets/img/board/arrow-urgent.svg"></div>
+                                <div class="position-urgent-arrow-popup-second"><img id="urgentSecondAddTask"
+                                        src="assets/img/board/arrow-urgent.svg"></div>
+                            </div>
+                        </div>
+                        <div id="mediumAddTask" onclick="changeColorMediumAddTask()" class="medium-popup">
+                            Medium
+                            <div class="medium-popup-child">
+                                <div class="position-medium-arrow-popup-first"><img id="mediumFirstAddTask"
+                                        src="assets/img/board/arrow-medium.svg"></div>
+                                <div class="position-medium-arrow-popup-second"><img id="mediumSecondAddTask"
+                                        src="assets/img/board/arrow-medium.svg"></div>
+                            </div>
+                        </div>
+                        <div id="lowAddTask" onclick="changeColorLowAddTask()" class="low-popup">
+                            Low
+                            <div class="low-popup-child">
+                                <div class="position-low-arrow-popup-first"><img id="lowFirstAddTask"
+                                        src="assets/img/board/arrow-low.svg"></div>
+                                <div class="position-low-arrow-popup-second"><img id="lowSecondAddTask"
+                                        src="assets/img/board/arrow-low.svg"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2>Subtasks</h2>
+                    <div class="position-relative">
+                        <input id="subtasksInput" class="addTaskSubTasksInput" type="text"
+                            placeholder="Add new subtask">
+                        <img class="subTasksCross" src="assets/img/addTask_cross.png" onclick="addSubtaskAddTask()">
+                    </div>
+                    <div id="subtasksList" class="subTaskFrame"></div>
+
+                    <div class="btn">
+                        <button onclick="closeForm()" id="btn-first" class="first-btn">Cancel<img
+                                class="cross-popup-btn" src="assets/img/board/close-popup.svg"></button>
+                        <button type="submit" value="submit" class="second-btn">Create Task<img
+                                src="assets/img/board/hook-popup.svg"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class="Notification d-none" id="createNotification">
+        Task created!
+    </div>
+</div>

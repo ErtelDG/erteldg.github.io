@@ -1,0 +1,8 @@
+
+FONT-SIZE NUR IN REM! Standard => 1rem => 16px
+Breakpoint width zu mobil => 800px
+Variable Größen ändern!
+
+-Möglichkeit einen Task zu löschen fehlt => Trash Icon bereits erstellt / hinzugefügt => Function noch erstellen
+-Wenn ein Task geöffnet wird, werden die aktuelle assigned nicht angezeigt. Auch die aktuelle Categorie wird nicht ausgewählt.
+-Bei der Taskerstellung, wenn Namen ausgewählt sind, der Dropdown geschlossen wird und dann wieder geöffnet, sind die Hacken verschwunden.

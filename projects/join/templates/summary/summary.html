@@ -1,0 +1,69 @@
+<div class="summary-all-elements">
+    <div class="summary-headline-container">
+        <h1 class="summary-headline-left">Summary</h1>
+        <div class="summary-headline-middle"></div>
+        <div class="summary-headline-right">Everything in a nutshell</div>
+    </div>
+
+    <div class="contain-summary-greet-and-detail">
+        <div class="summary-details-container">
+            <div class="summary-tasks-container">
+                <div class="summary-tasks-btn" onclick="select('board')">
+                    <div class="summary-tasks-frame">
+                        <div class="summary-tasks-amount" id="tasksInBoard">0</div>
+                        <div class="summary-tasks-text">Tasks in Board</div>
+                    </div>
+                </div>
+                <div class="summary-tasks-btn" onclick="select('board')">
+                    <div class="summary-tasks-frame">
+                        <div class="summary-tasks-amount" id="tasksInProgress">0</div>
+                        <div class="summary-tasks-text">Tasks in Progress</div>
+                    </div>
+                </div>
+                <div class="summary-tasks-btn" onclick="select('board')">
+                    <div class="summary-tasks-frame">
+                        <div class="summary-tasks-amount" id="awaitingFeedbackCount">0</div>
+                        <div class="summary-tasks-text">Awaiting Feedback</div>
+                    </div>
+                </div>
+            </div>
+            <div class="summary-urgency-container" onclick="select('board')">
+                <div class="summary-urgency-frame">
+                    <div class="summary-urgency-image">
+                        <img class ="arrows-up-icon" src="assets/img/summary/arrows-up-icon.png">
+                    </div>
+                    <div class="summary-urgency-details">
+                        <div class="summary-urgency-class" id="urgentTasks">0</div>
+                        <div class="summary-urgency-text">Urgent</div>
+                    </div>
+                </div>
+                <div class="summary-urgency-border"></div>
+                <div class="summary-urgency-deadline">
+                    <div class="summary-deadline-top" id="latestDeadline"></div>
+                    <div class="summary-deadline-bottom">Upcoming Deadline</div>
+                </div>
+            </div>
+            <div class="summary-to-do-container">
+                <div class="summary-to-do-frame" onclick="select('summary')">
+                    <img class="summary-pen-image" src="assets/img/summary/pen-icon.png" alt="">
+                    <div class="summary-to-do-check">
+                        <div class="summary-to-do-amount" id="tasksInTodo">0</div>
+                        <div class="summary-to-do-text">To-do</div>
+                    </div>
+                </div>
+                <div class="summary-to-do-frame" onclick="select('summary')">
+                    <img class="summary-done-image" src="assets/img/summary/done-icon.png" alt="">
+                    <div class="summary-to-do-check">
+                        <div class="summary-to-do-amount" id="tasksInDone">0</div>
+                        <div class="summary-to-do-text">Done</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="summary-greet-container">
+            <div class="summary-greet-top">Good morning,</div>
+            <div class="summary-greet-bottom" id="my-name"></div>
+        </div>
+    </div>
+
+</div>

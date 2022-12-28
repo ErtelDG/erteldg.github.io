@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sharkie</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="img/favicon_Sharkie-min.png" type="image/x-icon">
+
+  <script src="classTemplates/KeyboardAndTouch.class.js"></script>
+  <script src="classTemplates/AudioClass.class.js"></script>
+  <script src="classTemplates/BaseClass.class.js"></script>
+  <script src="classTemplates/MovableClass.class.js"></script>
+  <script src="classTemplates/Background.class.js"></script>
+  <script src="classTemplates/Coin.class.js"></script>
+  <script src="classTemplates/StatusBar.class.js"></script>
+  <script src="classTemplates/StatusBarValue.class.js"></script>
+  <script src="classTemplates/BubbleBottle.class.js"></script>
+  <script src="classTemplates/PoisonedBubbleClass.class.js"></script>
+  <script src="level/Level.class.js"></script>
+  <script src="classTemplates/SharkieClass.class.js"></script>
+  <script src="classTemplates/EnemyClass.class.js"></script>
+  <script src="classTemplates/EnemyPufferFishClass.class.js"></script>
+  <script src="classTemplates/EnemyJellyFishLilaClass.class.js"></script>
+  <script src="classTemplates/EnemyFinalFishClass.class.js"></script>
+  <script src="classTemplates/BubbleClass.class.js"></script>
+  <script src="classTemplates/GameWorld.class.js"></script>
+</head>
+
+<body class="m-0 h-screen w-screen">
+
+  <!-- first contain -->
+  <div class="grid grid-cols-6 grid-rows-5 h-full w-full bg-sharkie bg-cover" id="firstContain">
+    <div class="grid grid-cols-6 grid-rows-6 col-span-full row-span-4">
+      <div class="col-start-3 col-end-5 row-start-3 row-end-5">
+        <div class="w-full h-full cursor-pointer hover:opacity-75" id="start-icon" onclick="init()">
+          <img class="object-contain h-full w-full" src="img/6.Botones/Start/2.png" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="col-span-full row-span-1 flex justify-around">
+      <div class="h-full w-1/4 flex justify-center items-center">
+        <div class="flex flex-col h-full ">
+          <img class="p-2 h-3/5 object-scale-down" src="img/6.Botones/Key/arrowKeys.png" alt="">
+          <img class="p-2 h-2/5 object-scale-down" src="img/6.Botones/Tittles/MoveTitle.png" alt="">
+        </div>
+      </div>
+      <div class="h-full flex justify-center items-center">
+        <div class="flex flex-col h-full">
+          <img class="p-2 h-3/5 object-scale-down" src="img/6.Botones/Key/keyD.png" alt="">
+          <img class="p-2 h-2/5 object-scale-down" src="img/6.Botones/Tittles/AttackTittle.png" alt="">
+        </div>
+      </div>
+      <div class="h-full flex justify-center items-center">
+        <div class="flex flex-col h-full">
+          <img class="p-2 h-3/5 object-scale-down" src="img/6.Botones/Key/keyF.gif" alt="">
+          <img class="p-2 h-2/5 object-scale-down" src="img/6.Botones/Tittles/PoisonedBubbleTitle.png" alt="">
+        </div>
+      </div>
+      <div class="h-full flex justify-center items-center">
+        <div class="flex flex-col h-full">
+          <img class="p-2 h-3/5 object-scale-down" src="img/6.Botones/Key/keySpaceBar.png" alt="">
+          <img class="p-2 h-2/5 object-scale-down" src="img/6.Botones/Tittles/BubbleTitle.png" alt="">
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- second contain -->
+  <div class="h-full w-full flex-col justify-center items-center hidden bg-sharkieBlue" id="secondContain">
+    <canvas class="w-full h-4/5 lg:w-auto lg:h-auto" id="canvas" width="960" height="400" class="bg-black"></canvas>
+    <div class="grid grid-cols-12 gap-4 h-1/5 items-center w-full px-2">
+      <div id="arrow-left" class=" md:hidden"><img src="img/6.Botones/Key/arrowKeyLeft.png" alt=""></div>
+      <div id="arrow-up" class=" md:hidden"><img src="img/6.Botones/Key/arrowKeyUp.png" alt=""></div>
+      <div id="arrow-down" class=" md:hidden"><img src="img/6.Botones/Key/arrowKeyDown.png" alt=""></div>
+      <div id="arrow-right" class=" md:hidden"><img src="img/6.Botones/Key/arrowKeyRight.png" alt=""></div>
+      <div id="fin-slap" class=" md:hidden"><img src="img/6.Botones/Key/keyD.png" alt=""></div>
+      <div id="fire-green-bubble" class=" md:hidden"><img src="img/6.Botones/Key/keyF.gif" alt=""></div>
+      <div id="fire-white-bubble" class="col-span-3 md:hidden"><img src="img/6.Botones/Key/keySpaceBar.png" alt="">
+      </div>
+      <div id="soundOnOff" onclick="soundOnOff()"
+        class="cursor-pointer hover:opacity-75 col-start-2 col-span-4 hidden md:grid"><img
+          src="img/6.Botones/Key/soundOnOff.png" alt="">
+      </div>
+      <div id="fullscreenOnOff" class="cursor-pointer hover:opacity-75 col-span-3 md:col-start-8 md:col-span-4 md:grid"
+        onclick="fullscreenOnOff()"><img src="img/6.Botones/Key/fullscreenOnOff.png" alt=""></div>
+
+    </div>
+  </div>
+
+  <!-- third contain -->
+  <div class="h-full w-full grid-cols-12 grid-rows-6 bg-sharkie bg-cover hidden" id="thirdContain">
+    <div class="w-full h-full col-start-4 col-span-6 row-start-2">
+      <img id="imageYouWin" class="object-contain h-full w-full hidden" src="img/6.Botones/TryAgain/YouWin.png" alt="">
+      <img id="imageGameOver" class="object-contain h-full w-full hidden" src="img/6.Botones/TryAgain/GameOver.png"
+        alt="">
+    </div>
+    <div class="w-full h-full cursor-pointer col-start-4 col-span-6 row-start-4 hover:opacity-75" id="start-icon"
+      onclick="init()">
+      <img id="imageTryAgain" class="object-contain h-full w-full" src="img/6.Botones/TryAgain/TryAgain.png" alt="">
+    </div>
+  </div>
+
+
+  <script src="js/app.js"></script>
+</body>
+
+</html>
