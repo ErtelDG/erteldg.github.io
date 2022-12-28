@@ -1,5 +1,3 @@
-<?php
-
 ########### CONFIG ###############
 
 $recipient = 'ertel.developer@t-online.de';
