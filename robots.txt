@@ -1,4 +1,0 @@
-# robots.txt zu https://erteldg.github.io//
-
-User-agent: *
-Disallow: /
