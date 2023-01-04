@@ -1,0 +1,288 @@
+/*Schriftart auswaehlen fuer entsprechende Elemente
+
+font-family: 'Economica', sans-serif;
+font-family: 'Raleway', sans-serif;
+
+*/
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  padding: 0px;
+  margin: 0px;
+  font-family: "Economica", sans-serif;
+}
+
+main {
+  padding: 0px;
+  margin: 0px;
+}
+
+.thebestramenintown {
+  color: white;
+  height: 100vh;
+  background-image: url(img/bgr1.jpg);
+  background-size: cover;
+  background-position: bottom center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.haedsakuraramenintown {
+  height: max-content;
+  padding: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.topnavigation {
+  padding-right: 40px;
+  font-weight: bold;
+  font-size: clamp(1rem, 1.5vh, 5rem);
+  font-family: raleway;
+  position: absolute;
+  right: 0px;
+  width: 60%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.topnavigation a {
+  color: white;
+  text-decoration: none;
+}
+.topnavigation a:hover {
+  text-decoration: underline;
+}
+
+.headtelephone {
+  font-size: clamp(1rem, 1.5vh, 5rem);
+  align-items: center;
+  border-style: solid;
+  border-color: white;
+  border-radius: 10px;
+  background-color: red;
+  display: flex;
+  justify-content: space-between;
+  visibility: visible;
+}
+
+.icontelephone {
+  object-fit: contain;
+  display: flex;
+  align-items: center;
+}
+
+.slogan {
+  font-family: raleway;
+  text-align: center;
+  margin-top: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sakuraramen {
+  font-size: clamp(3.2rem, 2.5143rem + 3.4286vw, 8rem);
+  font-weight: bold;
+}
+
+.thebest {
+  font-size: clamp(1rem, 2vh, 5rem);
+}
+
+.imgsaku {
+  padding-left: 0px;
+}
+
+.howtoorder {
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+  font-weight: bold;
+  height: max-content;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.titelhowtoorder {
+  color: rgb(224, 87, 87);
+  font-size: clamp(1rem, 6vh, 12rem);
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.tablehowtoorder {
+  font-family: "Economica", sans-serif;
+  font-weight: bold;
+  font-size: clamp(1rem, 2vh, 4rem);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  text-align: center;
+  margin-bottom: 50px;
+
+  flex-wrap: wrap;
+}
+
+.menutablehowtoorder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.texttablehowtoorder {
+  padding-top: 30px;
+  font-size: 2rem;
+}
+
+.ourmenu {
+  font-family: "Economica", sans-serif;
+  font-weight: bold;
+  background-image: url(img/background.jpg);
+  background-size: cover;
+  background-position: top;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.titelourmenu {
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  text-align: center;
+
+  color: rgb(224, 87, 87);
+  font-size: clamp(1rem, 6vh, 12rem);
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.menu {
+  color: grey;
+  object-fit: contain;
+  padding-left: 100px;
+  padding-right: 100px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 60px;
+}
+
+table {
+  width: 300px;
+  font-size: clamp(1rem, 2vh, 4rem);
+  margin: 20px;
+}
+
+caption {
+  color: black;
+  text-align: center;
+  text-align: start;
+  font-size: clamp(2rem, 3vh, 6rem);
+}
+
+tr {
+  font-family: "Raleway", sans-serif;
+}
+
+td {
+  text-align: right;
+}
+
+th {
+  text-align: left;
+}
+
+caption {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.findus2 {
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.headfindus {
+  color: rgb(224, 87, 87);
+  font-size: clamp(1rem, 6vh, 12rem);
+  font-weight: bold;
+}
+
+.mapfindus {
+  text-align: center;
+  padding-bottom: 25px;
+}
+
+.map {
+  overflow-x: hidden;
+}
+footer {
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px;
+}
+
+.externicon {
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+@media (max-width: 800px) {
+  .hide-mobile {
+    display: none;
+  }
+
+  .slogan {
+    margin-top: 3vh;
+  }
+
+  .texttablehowtoorder {
+    padding-top: 10px;
+    padding-bottom: 60px;
+  }
+
+  .tablehowtoorder {
+    margin-bottom: -60px;
+  }
+
+  table {
+    margin-top: -40px;
+  }
+
+  .findus2 {
+    margin-top: -30px;
+  }
+
+  .headfindus {
+    margin-bottom: 30px;
+  }
+
+  footer {
+    justify-content: center;
+  }
+
+  .externiconbox {
+    padding: 10px;
+  }
+}

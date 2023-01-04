@@ -1,0 +1,14 @@
+Auf dieser Seite sehen Sie meine anfänglichen Projekte, also seien Sie GEWARNT!
+
+Meine ersten Projekte waren die Zertifizierungsprojekte von „freeCodeCamp.com“, was sehr zu empfehlen ist.
+
+Es folgten verschiedene Projekte mit JavaScript und dem Framework VueJS, um mir das Wissen anzueignen und die Methoden und Konzepte näher kennenzulernen.
+
+Wichtig!
+Diese Seite präsentiert meine ersten Schritte mit der Softwareentwicklung und kann NICHT als professionell bewertet werden!
+
+Wenn Sie meine professionelleren Projekte und Portfolioseite sehen wollen, sind Sie herzlich willkommen diese unter www.dennisgeorgertel.de zu besuchen!
+
+Viel Spaß auf dieser Seite und mit den sicherlich vielen Amateurfehler als Softwareentwickler :-)
+
+Sie können mich kontaktieren und finden auf: GitHub unter ErtelDG, get-in-It und meiner Portfolioseite.

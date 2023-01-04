@@ -1,0 +1,46 @@
+body {
+  background-color: antiquewhite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'Roboto Mono', monospace;
+  height: 100vh;
+}
+
+h1 {
+  font-size: clamp(1rem, 0.8305rem + 1.3559vw, 3rem);
+    text-align: center;
+}
+
+table {
+  width: clamp(12.5rem, 6.7797rem + 45.7627vw, 80rem);
+  
+  background-color: rgb(90, 80, 80);
+  color: white;
+    font-size: clamp(1rem, 0.8305rem + 1.3559vw, 3rem);
+  }
+
+td {
+  width: 25%;
+  height: 12vh;
+    background-color: rgb(100, 90, 90);
+}
+
+
+td:hover {
+  background-color: rgb(120, 110, 100);
+  cursor: pointer;
+}
+
+#resultDisplay {
+  font-size: clamp(2.66rem, 2.2075rem + 3.6203vw, 8rem);
+  height: 25vh;
+  background-color: rgb(130, 120, 110);
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  color: white;
+  box-sizing: border-box;
+  padding: 10px;
+}

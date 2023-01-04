@@ -1,0 +1,94 @@
+body {
+  font-size: clamp(1rem, 0.9153rem + 0.678vw, 2rem);
+  display: flex;
+  justify-content: center;
+  background-color: #fafafa;
+  text-align: center;
+}
+
+main {
+  width: 60rem;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+p {
+  font-size: clamp(0.8rem, 0.6855rem + 0.5091vw, 1.5rem);
+}
+
+tbody {
+  font-size: clamp(0.6rem, 0.4036rem + 0.8727vw, 1.8rem);
+}
+
+table,
+th,
+td {
+  border: thin solid;
+  font-size: clamp(1rem, 0.9322rem + 0.5424vw, 1.8rem);
+}
+
+.textarea {
+  height: 50px;
+  margin: 20px;
+  width: calc(20% - 20px);
+  background-color: rgba(0, 0, 0, 0.12);
+  border-style: solid;
+  border-color: darkgray;
+  text-align: center;
+  padding: 5px;
+  width: min-content;
+  height: min-content;
+  font-size: clamp(1rem, 0.9153rem + 0.678vw, 2rem);
+}
+
+h1 {
+  font-size: clamp(2rem, 1.9153rem + 0.678vw, 3rem);
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+button {
+  font-size: clamp(0.6rem, 0.5661rem + 0.2712vw, 1rem);
+  text-align: center;
+  width: clamp(15rem);
+  height: clamp(6rem);
+  font-size: clamp(1rem, 0.9153rem + 0.678vw, 1.4rem);
+  border-style: solid;
+  border-color: black;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.output {
+  font-size: clamp(1rem, 0.9153rem + 0.678vw, 2rem);
+  width: min-content;
+  height: min-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-style: solid;
+  border-radius: 5px;
+  background-color: #e9e9ed;
+  padding: 5px;
+  margin: 10px;
+}
+
+@media only screen and (max-width: 950px) {
+  .result {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    height: 250px;
+    height: 500px;
+  }
+}

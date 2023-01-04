@@ -1,0 +1,112 @@
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: clamp(1rem, 0.9182rem + 0.3636vw, 1.5rem);
+}
+
+h1 {
+  font-size: clamp(1.5rem, 1.4576rem + 0.339vw, 2rem);
+  text-align: center;
+}
+
+main {
+  width: 60rem;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #e9e9ed;
+  height: 100vh;
+}
+
+p {
+  font-size: clamp(0.8rem, 0.7345rem + 0.2909vw, 1.2rem);
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+a {
+  font-size: clamp(0.5rem, 0.4746rem + 0.2034vw, 0.8rem);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  background-image: url(img/Magic8ball.jpg);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.9;
+  margin-top: clamp(1rem, 0.9153rem + 0.678vw, 2rem);
+}
+
+button {
+  font-size: clamp(1rem, 0.9182rem + 0.3636vw, 1.5rem);
+  text-align: center;
+  width: clamp(12.5rem, 9.3091rem + 14.1818vw, 32rem);
+
+  padding: 2px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 5px;
+}
+
+input {
+  text-align: center;
+  font-size: clamp(0.8rem, 0.7407rem + 0.4746vw, 1.5rem);
+}
+
+output {
+  width: clamp(12.5rem, 9.3091rem + 14.1818vw, 32rem);
+  margin: clamp(1rem, 0.9153rem + 0.678vw, 2rem);
+  background-color: white;
+  border-style: solid;
+  border-color: black;
+  border-radius: 5px;
+  color: red;
+  margin-top: -25px;
+}
+
+input {
+  width: clamp(12.5rem, 9.3091rem + 14.1818vw, 32rem);
+  margin: clamp(1rem, 0.9153rem + 0.678vw, 2rem);
+  background-color: white;
+  border-style: solid;
+  border-color: black;
+  border-radius: 5px;
+  margin-top: -25px;
+}
+
+.inputOutputDiv {
+  display: flex;
+  flex-direction: column;
+  width: clamp(12.5rem, 9.3091rem + 14.1818vw, 32rem);
+  margin: clamp(1rem, 0.9153rem + 0.678vw, 2rem);
+  background-color: rgb(238, 231, 231);
+  border-style: groove;
+  border-radius: 5px;
+}
+
+footer {
+  font-size: clamp(0.5rem, 0.4746rem + 0.2034vw, 0.8rem);
+}
+
+@media only screen and (max-width: 1000px) {
+  main {
+    width: clamp(12.5rem, 0.625rem + 95vw, 60rem);
+  }
+
+  input {
+    margin-top: -12px;
+  }
+
+  output {
+    margin-top: -12px;
+  }
+}

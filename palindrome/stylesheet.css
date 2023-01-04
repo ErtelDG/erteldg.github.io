@@ -1,0 +1,76 @@
+body {
+  font-size: clamp(1rem, 0.9153rem + 0.678vw, 2rem);
+  display: flex;
+  justify-content: center;
+  background-color: #fafafa;
+}
+
+main {
+  width: 96rem;
+  padding: 10px;
+}
+
+.palindromeTextarea {
+  height: 200px;
+  margin-bottom: 8px;
+  width: calc(100% - 20px);
+  background-color: rgba(0, 0, 0, 0.12);
+  border-style: solid;
+  border-color: darkgray;
+}
+
+h1 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.result {
+  display: flex;
+  justify-content: space-around;
+}
+
+input {
+  font-size: clamp(1rem, 0.9153rem + 0.678vw, 2rem);
+}
+
+button {
+  font-size: clamp(0.6rem, 0.5661rem + 0.2712vw, 1rem);
+  text-align: center;
+  width: clamp(15rem);
+  height: clamp(6rem);
+  font-size: clamp(1rem, 0.9153rem + 0.678vw, 1.4rem);
+  border-style: solid;
+  border-color: black;
+  border-radius: 5px;
+}
+
+.output {
+  font-size: clamp(0.6rem, 0.5661rem + 0.2712vw, 1rem);
+  width: clamp(7.5rem, 7.0763rem + 3.3898vw, 12.5rem);
+  height: clamp(3rem, 2.8305rem + 1.3559vw, 5rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 80px;
+  font-size: clamp(1rem, 0.9153rem + 0.678vw, 1.4rem);
+  border-style: solid;
+  border-radius: 5px;
+  background-color: #e9e9ed;
+}
+
+.result {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 950px) {
+  .result {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    heigt: 250px;
+    height: 500px;
+  }
+}
